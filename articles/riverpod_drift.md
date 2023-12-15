@@ -1,13 +1,13 @@
 ---
-title: "【Flutter】Drift×riverpod×freezeで非同期にUI更新するサンプルアプリ"
+title: "【Flutter】Drift×Riverpod×freezedで非同期にUI更新するサンプルアプリ"
 emoji: "🦊"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [Flutter, Drift, Riverpod, freeze]
+topics: [Flutter, Drift, Riverpod, freezed]
 published: true
 ---
 
 # はじめに
-この記事はデータベースにDrift、非同期処理にriverpodを使って簡単なサンプルアプリを作ってみた記事となります。
+この記事はデータベースにDrift、非同期処理にRiverpodを使って簡単なサンプルアプリを作ってみた記事となります。
 なお、バージョンは次の通り
 - Flutter:3.16
 - Drift:2.13.2
@@ -20,7 +20,7 @@ DriftはFlutterとDartのためのリアクティブな永続化ライブラリ�
 マルチプラットフォームに対応しており、モバイルからWebまでのデータベースで構築可能です。[(pub.devより引用)](https://pub.dev/packages/drift)
 
 テーブル構造のデータベースを採用する場合には有力なツールとなります。
-今回はfreezed、riverpodの説明を割愛しますが、それぞれ人気のライブラリであり、一緒に使う機会が多いと思います。
+今回はfreezed、Riverpodの説明を割愛しますが、それぞれ人気のライブラリであり、一緒に使う機会が多いと思います。
 
 ## 今回作成するアプリの概要
 今回のサンプルアプリでは、
@@ -288,7 +288,7 @@ Widget build(BuildContext context, WidgetRef ref) {
 ここでは簡略化のため、main.dartファイルにざっと書いていますが、本来であれば別ファイルにして分けるのが適切です。
 簡単にコードの説明をすると、Widget buildの中で`final data = ref.watch(userProvider);`として、データを監視します。
 そして、ボタンを押した際に`ref.read(userProvider.notifier).fetchData()`が実行され、userProviderの変更が監視していたdataに反映され、`ListView.builder〜`のところが描画されます。
-簡単なサンプルでしたが、Drift,freeze,riverpodのモダンな技術を使って、どのような流れで動くかを説明しました。
+簡単なサンプルでしたが、Drift,freezed,Riverpodのモダンな技術を使って、どのような流れで動くかを説明しました。
 
 ## 補足：データベースの中身の確認
 今回はじめてDriftを触ってみて、若干扱いづらいところがあったのがデータベースにちゃんと値が入っているかを確認するところでした。
