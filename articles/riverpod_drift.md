@@ -1,5 +1,5 @@
 ---
-title: "【Flutter】driftxriverpod×freezeで非同期にUI更新するサンプルアプリ"
+title: "【Flutter】Drift×riverpod×freezeで非同期にUI更新するサンプルアプリ"
 emoji: "🦊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Flutter, Drift, Riverpod, freeze]
@@ -7,7 +7,7 @@ published: true
 ---
 
 # はじめに
-この記事はデータベースにdrift、非同期処理にriverpodを使って簡単なサンプルアプリを作ってみた記事となります。
+この記事はデータベースにDrift、非同期処理にriverpodを使って簡単なサンプルアプリを作ってみた記事となります。
 なお、バージョンは次の通り
 - Flutter:3.16
 - Drift:2.13.2
