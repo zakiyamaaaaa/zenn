@@ -1,0 +1,994 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@日" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@day"
+          }
+        }
+      }
+    },
+    "%@月" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@month"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld日" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldday"
+          }
+        }
+      }
+    },
+    "+" : {
+
+    },
+    "✗" : {
+
+    },
+    "🍩リング" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🍩Ring"
+          }
+        }
+      }
+    },
+    "👍スタンダード" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "👍Standard"
+          }
+        }
+      }
+    },
+    "📅カレンダー" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📅Calendar"
+          }
+        }
+      }
+    },
+    "１ヶ月で１周" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 round in 1 month"
+          }
+        }
+      }
+    },
+    "１年で１周" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 round in 1 year"
+          }
+        }
+      }
+    },
+    "１週間で１周" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 round in 1 week"
+          }
+        }
+      }
+    },
+    "２個以上のイベントを作成するにはアップグレードが必要です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade is required to create more than 2 events"
+          }
+        }
+      }
+    },
+    "１００日で１周" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 lap in 100 days"
+          }
+        }
+      }
+    },
+    "Aa" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aa"
+          }
+        }
+      }
+    },
+    "App created by Shoichi Yamzaki" : {
+
+    },
+    "CountDays" : {
+
+    },
+    "Crop Image Picker" : {
+
+    },
+    "Dog Name" : {
+
+    },
+    "Get started" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "hoge" : {
+
+    },
+    "Mサイズ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "M size"
+          }
+        }
+      }
+    },
+    "No Image" : {
+
+    },
+    "OK" : {
+
+    },
+    "Owner Name" : {
+
+    },
+    "QRコード" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR code"
+          }
+        }
+      }
+    },
+    "Sサイズ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S size"
+          }
+        }
+      }
+    },
+    "the text below" : {
+
+    },
+    "アップグレード" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade"
+          }
+        }
+      }
+    },
+    "アップグレードが必要です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade required"
+          }
+        }
+      }
+    },
+    "アップデートによる追加機能を先行して利用することができます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Advance access to additional features through updates"
+          }
+        }
+      }
+    },
+    "あなただけのオリジナル背景を設定できます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can set your own original background."
+          }
+        }
+      }
+    },
+    "あなたの好きなデザインを選ぶことができます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can choose any design you like"
+          }
+        }
+      }
+    },
+    "アプリでイベントを設定するとウィジェットに反映されます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When an event is set in the application, it is reflected in the widget"
+          }
+        }
+      }
+    },
+    "アプリを共有する" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share the app"
+          }
+        }
+      }
+    },
+    "イベント" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event"
+          }
+        }
+      }
+    },
+    "イベントタイプ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event type"
+          }
+        }
+      }
+    },
+    "イベントを共有" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share the event"
+          }
+        }
+      }
+    },
+    "イベント作成日からゴールまでを１周" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One lap from the date of event creation to the goal"
+          }
+        }
+      }
+    },
+    "イベント名を入力" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter event name"
+          }
+        }
+      }
+    },
+    "イベント表示設定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event Display Settings"
+          }
+        }
+      }
+    },
+    "ウィジェット" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget"
+          }
+        }
+      }
+    },
+    "お問い合わせ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact Us"
+          }
+        }
+      }
+    },
+    "カウントアップ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Count up"
+          }
+        }
+      }
+    },
+    "カウントダウン" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Count down"
+          }
+        }
+      }
+    },
+    "キャンセル" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "このイベントを消去しますか？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to delete this event?"
+          }
+        }
+      }
+    },
+    "このスタイルはロック\nされています" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This style is locked"
+          }
+        }
+      }
+    },
+    "このスタイルを利用するにはアップグレードが必要です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade is required to use this style"
+          }
+        }
+      }
+    },
+    "このプライバシーポリシー（以下、「本ポリシー」といいます。）は、zwork（以下、「当社」といいます。）が提供するアプリケーション（以下、「アプリ」といいます。）におけるユーザーの個人情報の収集、使用、共有に関する方針を定めるものです。アプリをご利用いただく際には、本ポリシーに同意いただいたものとみなします。\n\n1. 収集する情報\nアプリを利用する際、当社は以下の情報を収集することがあります。\n       - ユーザーのアプリ利用時間\n\n2. 情報の使用\n収集した情報は、以下の目的で使用されることがあります。\n       - アプリの改善、お知らせなど\n\n3. 情報の共有\n収集した情報は、法的要件に従った場合や以下のケースを除いて、第三者と共有されることはありません。\n・人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき\n・公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき\n・国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき\n\n4. ユーザーの権利\nユーザーは、自身の個人情報へのアクセス、修正、削除を要求する権利を有します。詳細はアプリ内の設定で確認してください。\n\n5. セキュリティ\n当社は、適切なセキュリティ対策を講じ、ユーザーの個人情報の保護に努めます。\n\n6. クッキーとトラッキング技術\nアプリ内でクッキーなどのトラッキング技術を使用する場合、その詳細についてはアプリ内でご確認ください。\n\n7. 変更通知\n本ポリシーは変更される場合があり、変更後のポリシーはアプリ内で通知されます。\n\n8. 連絡先\nプライバシーポリシーに関するお問い合わせは、以下の連絡先までご連絡ください。\n           zwork.official.app@gmail.com\n\n以上\n" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This privacy policy (hereinafter referred to as the \"Policy\") is published by zwork (hereinafter referred to as the \"Company\"). This privacy policy (\"Policy\") applies to applications (\"Apps\") provided by zwork (\"Company\"). This Privacy Policy (\"Policy\") sets forth the policy regarding the collection, use, and sharing of users' personal information in applications (\"Apps\") This Privacy Policy (\"Policy\") sets forth the policy regarding the collection, use, and sharing of users' personal information in the applications (\"Apps\") provided by zwork (\"Company\"). By using the Application, you are deemed to have agreed to this policy.\n\n1. information to be collected\nWhen using the App, we may collect the following information.\n       - Time the user spends using the app\n\n2. use of information\nWe may use the collected information for the following purposes\n       - App improvements, notifications, etc. 3.\n\n3. information sharing\nInformation collected will not be shared with third parties except in accordance with legal requirements or in the following cases: - When it is necessary for the protection of the life, body, or property of an individual.\nWhen it is necessary to protect the life, body, or property of an individual and it is difficult to obtain the consent of the individual.\nCases in which the provision of personal information is especially necessary for improving public health or promoting the sound growth of children, and in which it is difficult to obtain the consent of the person concerned\nWhen it is necessary to cooperate with a national agency, a local government, or an individual or entity entrusted by either a national agency or local government to execute affairs prescribed by law, and obtaining the consent of the individual is likely to impede the execution of such affairs.\n\n4. user's rights\nThe user has the right to request access to, correction of, or deletion of his/her personal information. For details, please check the settings in the application.\n\n5. security\nWe will take appropriate security measures to protect the user's personal information.\n\n6. cookies and tracking technology\nIf we use cookies or other tracking technologies within the app, please review the details within the app.\n\n7. notification of changes\nThis policy is subject to change, and you will be notified of any changes within the app.\n\n8. contact information\nIf you have any questions regarding our privacy policy, please contact us at\n           zwork.official.app@gmail.com"
+          }
+        }
+      }
+    },
+    "この利用規約（以下、「本規約」といいます。）は、zwork（以下、「当社」といいます。）が提供するアプリケーション（以下、「アプリ」といいます。）の利用に関する条件を定めるものです。アプリをご利用いただく際には、本規約に同意いただいたものとみなします。\n\n\n1. サービスの提供\n当社は、アプリを通じてユーザー体験を提供します。ユーザーは、本規約に従い、アプリを利用できます。\n\n2. 利用規約の変更\n    当社は、必要に応じて本規約を変更することがあります。変更後の利用規約は、アプリ内での表示をもって通知された時点で効力を生じるものとします。\n\n3. ユーザーの責任\n    ユーザーは、正確かつ適切な情報を提供し、アプリの利用に際して法律および規制に遵守する責任があります。\n\n4. プライバシー\n    ユーザーの個人情報の収集、使用、共有については、当社のプライバシーポリシーに従います。\n\n5. 知的財産権\n    アプリに関連する知的財産権は、当社またはライセンサーに帰属します。ユーザーは、無断でこれらの知的財産権を使用、複製、変更することはできません。\n\n6. 免責事項\n    アプリの利用に関する一切のリスクは、ユーザーが負うものとし、当社はそれに関連する損害に対して責任を負いません。\n\n7. 法的権限\n    本規約に関する紛争については、当社の所在地を管轄する裁判所を専属的合意管轄とします。\n\n以上" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "These terms of use (hereinafter referred to as \"Terms of Use\") shall apply to all users of zwork (hereinafter referred to as \"zwork\"). This Terms of Use (hereinafter referred to as the \"Terms\") applies to applications (hereinafter referred to as \"Apps\") provided by zwork (hereinafter referred to as \"Company\"). (hereinafter referred to as \"the Company\"), sets forth the terms and conditions for the use of applications (hereinafter referred to as \"apps\") provided by zwork (hereinafter referred to as the \"Company\") provides the terms and conditions for the use of applications (hereinafter referred to as the \"Application\"). By using the Application, you are deemed to have agreed to these Terms of Use.\n\n\n1. provision of services\nWe will provide a user experience through the Application. Users may use the Application in accordance with these Terms of Use.\n\nChanges to the Terms of Use\n    MUTOH HOLDINGS reserves the right to change the Terms of Service as necessary. The revised Terms of Use shall become effective upon notification by displaying the revised Terms of Use in the application. 3.\n\n3. user's responsibility\n    Users are responsible for providing accurate and appropriate information and for complying with laws and regulations when using the application.\n\n4. privacy\n    The collection, use, and sharing of User's personal information is governed by our Privacy Policy.\n\n5. intellectual property rights\n    Intellectual property rights related to the App belong to us or our licensors. Users may not use, reproduce, or modify these intellectual property rights without permission.\n\n6. disclaimer\n    The user assumes all risks related to the use of the application, and we are not responsible for any damages related to it.\n\n7. legal authority\n    Any disputes related to this agreement shall be subject to the exclusive jurisdiction of the court having jurisdiction over the location of the Company.\n\nAbove"
+          }
+        }
+      }
+    },
+    "シェア方法" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to share"
+          }
+        }
+      }
+    },
+    "すべてのイベントを\n削除しますか" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to delete all events"
+          }
+        }
+      }
+    },
+    "すべてのイベントを削除" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all event"
+          }
+        }
+      }
+    },
+    "テキスト" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text"
+          }
+        }
+      }
+    },
+    "デバッグモード" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug mode"
+          }
+        }
+      }
+    },
+    "プライバシーポリシー" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy policy"
+          }
+        }
+      }
+    },
+    "ホーム画面にウィジェットを追加できます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets can be added to the home screen"
+          }
+        }
+      }
+    },
+    "ぼかし🌫️" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gradation"
+          }
+        }
+      }
+    },
+    "リピート" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repeat"
+          }
+        }
+      }
+    },
+    "一度消去すると元に戻せません" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Once erased, it cannot be restored."
+          }
+        }
+      }
+    },
+    "作成できるイベント数の上限が１個から無制限になります" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The maximum number of events that can be created will be unlimited instead of one."
+          }
+        }
+      }
+    },
+    "共有+プライバシー" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share + Privacy"
+          }
+        }
+      }
+    },
+    "利用規約" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use"
+          }
+        }
+      }
+    },
+    "削除" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "削除する" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "削除を確定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm deletion"
+          }
+        }
+      }
+    },
+    "変更する" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change"
+          }
+        }
+      }
+    },
+    "好きなだけイベントを作成可能に！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allows creation of as many events as desired!"
+          }
+        }
+      }
+    },
+    "明るさ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brightness"
+          }
+        }
+      }
+    },
+    "明るさ💡" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brightness"
+          }
+        }
+      }
+    },
+    "時刻" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time"
+          }
+        }
+      }
+    },
+    "時間と分を表示" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display hours and minutes"
+          }
+        }
+      }
+    },
+    "更新" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        }
+      }
+    },
+    "未来の日付を基準にカウントする場合、カウント日数がマイナスになっちゃうよ！！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you count based on a future date, the number of days counted will be negative!"
+          }
+        }
+      }
+    },
+    "様々な表示スタイルが選択可能に！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Various display styles can be selected!"
+          }
+        }
+      }
+    },
+    "次へ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "毎年" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every year"
+          }
+        }
+      }
+    },
+    "毎年：" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every year:"
+          }
+        }
+      }
+    },
+    "毎月" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every month"
+          }
+        }
+      }
+    },
+    "毎月：" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every month:"
+          }
+        }
+      }
+    },
+    "毎月のカウント日づけ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Days of the month to be counted each week"
+          }
+        }
+      }
+    },
+    "毎週" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every week"
+          }
+        }
+      }
+    },
+    "毎週：" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every week:"
+          }
+        }
+      }
+    },
+    "毎週のカウント曜日" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Days of the week to be counted each week"
+          }
+        }
+      }
+    },
+    "消去" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "画像を使用するにはアップグレードが必要です🙇‍♂️" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade is required to use the image: 🙇‍♂️"
+          }
+        }
+      }
+    },
+    "画像を変更" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change Image"
+          }
+        }
+      }
+    },
+    "画像編集" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Editing"
+          }
+        }
+      }
+    },
+    "画像設定にはアップグレードが必要です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade is required for image setup"
+          }
+        }
+      }
+    },
+    "登録" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Register"
+          }
+        }
+      }
+    },
+    "終了" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish"
+          }
+        }
+      }
+    },
+    "終日イベント" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "all-day event"
+          }
+        }
+      }
+    },
+    "編集" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "背景スタイル" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Background style"
+          }
+        }
+      }
+    },
+    "背景に画像を設定可能に！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Images can be set as background!"
+          }
+        }
+      }
+    },
+    "複製" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duplication"
+          }
+        }
+      }
+    },
+    "要素1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Element 1"
+          }
+        }
+      }
+    },
+    "要素2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Element 2"
+          }
+        }
+      }
+    },
+    "要素3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Element 3"
+          }
+        }
+      }
+    },
+    "設定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting"
+          }
+        }
+      }
+    },
+    "詳細設定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Advanced Setting"
+          }
+        }
+      }
+    },
+    "購入" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase"
+          }
+        }
+      }
+    },
+    "購入を復元" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchase"
+          }
+        }
+      }
+    },
+    "購入記録がありません" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No record of purchase"
+          }
+        }
+      }
+    },
+    "追加機能を先行招待！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Additional features are invited in advance!"
+          }
+        }
+      }
+    },
+    "通知" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
