@@ -36,7 +36,7 @@ https://docs.flutter.dev/deployment/flavors
 
 # --dart-define-from-fileを使ってみる
 ## 環境変数ファイルの設定
-今回はdevelopment, staging, productionの３つにビルド環境を想定します。
+今回はdevelopment, staging, productionの３つのビルド環境を想定します。
 ビルド時に参照する環境変数のファイルを設定します。
 プロジェクトのrootから任意のフォルダ名でフォルダ作成し、ここに.json(または.env)ファイルをそれぞれの環境ごとに作成していきます。
 今回はフォルダ名をflavorとしました。
@@ -86,9 +86,9 @@ iOS、Androidで必要なアイコン画像の種類が異なり、さらにそ�
 - images/icons/icon-staging.png
 - images/icons/icon-production.png
 
-![](images/dart_define_from_file_to_build/icon-development.png =100px)
-![](images/dart_define_from_file_to_build/icon-staging.png =100px)
-![](images/dart_define_from_file_to_build/icon-production.png =100px)
+![](/images/dart_define_from_file_to_build/icon-development.png =300x)
+![](/images/dart_define_from_file_to_build/icon-staging.png =300x)
+![](/images/dart_define_from_file_to_build/icon-production.png =300x)
 
 flutter_launcher_iconsのパッケージを導入します。
 
@@ -160,14 +160,14 @@ flutter run --dart-define-from-file=flavor/prod.json
 
 画像のようにアイコンとアプリ名が変わっているのがわかります。
 
-![](images/dart_define_from_file_to_build/image1.png)
+![](/images/dart_define_from_file_to_build/image1.png)
 
 ### launch.jsonを設定して、ターミナルからの入力を省略する。
 これまでの設定で一応ビルド環境を分けることが可能となったのですが、いちいちコマンドを入力するのが面倒なので、VSCodeのビルド設定ファイルを作成し、簡単にします。
 
 VSCodeの左側のビルドメニューを選択し、`launch.jsonファイルを作成`を選択しましょう。.vscodeの配下にlaunch.jsonが生成されます。
 
-![](images/dart_define_from_file_to_build/image2.png)
+![](/images/dart_define_from_file_to_build/image2.png =300x)
 
 
 次のようにlaunch.jsonファイルを書き換えます。
