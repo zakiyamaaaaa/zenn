@@ -7,37 +7,38 @@ published: false
 ---
 
 # はじめに
-Flutterのビルド環境を分けるのとアプリをストアに公開するための流れについての記事です。
+Flutterのビルド環境切替のための`--dart-define-from-file`の使い方の記事がメインです。
 
-モバイルアプリで開発する際は、リリースビルドと開発ビルドを分ける必要がありますが、それらを手動で変更する場合、手間が多く、変更するところが間違っていたり、直してなかったりすると手戻りが発生するなどの事故が起きやすいです。
+モバイルアプリで開発する際は、リリースビルドと開発ビルドを分ける必要がありますが、それらを手動で変更する場合、手間が多く、変更する箇所が間違っていたり、開発環境からリリース環境、そして開発環境に戻すときに、直すべきところを直してなかったりすると事故が置き、手戻りが発生する可能性が大きくなります。
 そのため、ビルドの設定を自動的に反映するようにしたいことが多々あります。
-iOSの場合は、Build configurationとして知られる項目を設定することで、ビルドを切り分けすることが出来ます。
+iOSの場合は、Build configurationとして知られる項目を設定することで、ビルドを切替することが出来ます。
 
-Flutterは特にマルチプラットフォームでのアプリ開発が可能であるため、そうした自動化はネイティブのときより効用が多いです。
+Flutterは特にマルチプラットフォームでのアプリ開発・ビルドが可能であるため、ビルド環境設定の切替を自動化することはネイティブのときより効用が多いと考えます。
 
-調べていくと、FlutterはFlavorsというAndroid由来のビルド切り分けライブラリを使っているそうで、公式でも詳細な使い方の記述があります。
+調べていくと、FlutterはFlavorsというAndroid由来のビルド環境切替ライブラリを使っているそうで、公式でも詳細な使い方の記述があります。
 
 https://docs.flutter.dev/deployment/flavors
 
-自分も最初Flavorsのみを使ったビルド設定の切り替えをやろうとしましたが、結構設定が複雑でした。
-調べていくと、dart-define-from-filesというpackageを用いた環境分けが結構使われているらしいので、今回はこちらを採用してのビルド環境の切り分けを行いました。
-※dart-defineというpackageもありますが、これとは別のpackageです。dart-define-from-fileがdart-defineを改良したものです。
-[おかやまんさんの記事](https://zenn.dev/blendthink/articles/392607db0a65dd)から引用すると、dart-defineには次のような課題がありました。
+自分も最初Flavorsのみを使ったビルド環境切替をやろうとしましたが、結構設定が複雑でした。
+その他にも、ビルド環境を切り替えにFlutter3.7より導入された`--dart-define-from-file`が結構使われており、[Gbolahanさんの記事](https://gboliknow.medium.com/efficiently-configuring-your-flutter-app-with-dart-define-from-file-604d9bd49e7b)によると、--dart-define-from-filesは開発者が設定ファイルから環境変数をロードすることを可能にする代替アプローチを提供し、サードパーティのパッケージや手動更新なしで簡単に管理し、セキュリティを確保することができます。今回はこちらを採用してのビルド環境の切替を行いました。
+※似た引数として、`--dart-define`がありますが、`--dart-define`を改良したものが`--dart-define-from-file`です。
+[おかやまんさんの記事](https://zenn.dev/blendthink/articles/392607db0a65dd)から引用すると、`--dart-define`には次のような課題がありました。
 
 - 多くの定義がある場合、起動コマンドが非常に長くなってしまう
 - 切り替えるパッケージが複数ある場合、保守が困難になる
 - これらの定義を Android と iOS で直接利用しようとすると、それぞれで Base64 でデコードしなければならない
 これらの課題を解決するために導入されました。
 
-この記事のタイトルにもあるようにdart-define-from-fileを用いて、Flutterでのビルド環境を分けていきます
+この記事のタイトルにもあるように`--dart-define-from-file`を用いて、Flutterでのビルド環境を分けていきます。
+ちなみにビルドの設定などはVSCodeをもとにしています。
 
-# --dart-define-from-file
-## 分け方
-今回はdevelopment, staging, productionの３つに分けます。production=リリース版です。
-
-## 設定ファイル
+# --dart-define-from-fileを使ってみる
+## 環境変数ファイルの設定
+今回はdevelopment, staging, productionの３つにビルド環境を想定します。
+ビルド時に参照する環境変数のファイルを設定します。
 プロジェクトのrootから任意のフォルダ名でフォルダ作成し、ここに.json(または.env)ファイルをそれぞれの環境ごとに作成していきます。
 今回はフォルダ名をflavorとしました。
+JSONのそれぞれのkeyをビルド時に環境変数として利用できます。なので、任意のkey,valueをセットして、それぞれの環境ごとに反映することができます。そのため、すべてのファイルでkeyは統一しましょう。
 
 ```json:flavor/dev.json
 {
@@ -63,13 +64,12 @@ https://docs.flutter.dev/deployment/flavors
 }
 ```
 
-JSONのそれぞれのkeyの意味は後述します。
-この状態で、一応dart-define-from-fileでのビルドが可能です。
+この状態で、一応`--dart-define-from-file`でのビルドが可能ですが、これだけではまだ反映されません。
 
 ```bash
 flutter run --dart-define-from-file=flavor/dev.json
 ```
---dart-define-from-fileのあとに、設定するファイルのパスを指定します。
+`--dart-define-from-file`のあとに、設定するファイルのパスを指定します。
 
 # アプリアイコンを環境別に分ける
 iOS、Androidで必要なアイコン画像の種類が異なり、さらにそれぞれのOSで解像度の違うアイコン画像が様々必要となり、これをひとつひとつ設定するのはとても手間です。
@@ -80,9 +80,13 @@ iOS、Androidで必要なアイコン画像の種類が異なり、さらにそ�
 適当な場所にそれぞれの環境ごとのアイコンを配置します。
 今回は/images/iconsの配下に設定しました。
 
-images/icons/icon-development.png
-images/icons/icon-staging.png
-images/icons/icon-production.png
+- images/icons/icon-development.png
+- images/icons/icon-staging.png
+- images/icons/icon-production.png
+
+![](images/dart_define_from_file_to_build/icon-development.png =100px)
+![](images/dart_define_from_file_to_build/icon-staging.png =100px)
+![](images/dart_define_from_file_to_build/icon-production.png =100px)
 
 flutter_launcher_iconsのパッケージを導入します。
 
@@ -154,10 +158,16 @@ flutter run --dart-define-from-file=flavor/prod.json
 
 画像のようにアイコンとアプリ名が変わっているのがわかります。
 
-### launch.jsonを設定して、コマンドからの入力を省略する。
+![](images/dart_define_from_file_to_build/image1.png)
+
+### launch.jsonを設定して、ターミナルからの入力を省略する。
 これまでの設定で一応ビルド環境を分けることが可能となったのですが、いちいちコマンドを入力するのが面倒なので、VSCodeのビルド設定ファイルを作成し、簡単にします。
 
-VSCodeの左側のビルドメニューを選択し、launch.jsonファイルを作成、を選択しましょう。.vscodeの配下にlaunch.jsonが生成されます。
+VSCodeの左側のビルドメニューを選択し、`launch.jsonファイルを作成`を選択しましょう。.vscodeの配下にlaunch.jsonが生成されます。
+
+![](images/dart_define_from_file_to_build/image2.png)
+
+
 次のようにlaunch.jsonファイルを書き換えます。
 
 ```json:.vscode/launch.json
@@ -213,3 +223,4 @@ flutter build appbundle --dart-define-from-file=flavor/prod.json
 - https://qiita.com/kazakago/items/e1027619d0361848f3b8
 - https://zenn.dev/blendthink/articles/392607db0a65dd
 - https://medium.com/flutter-jp/icon-935d637d2da0
+- https://gboliknow.medium.com/efficiently-configuring-your-flutter-app-with-dart-define-from-file-604d9bd49e7b
