@@ -2,8 +2,8 @@
 title: "論理ゲートを爆速で作成できる「Logisim」の紹介"
 emoji: "🦹‍♂️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [Logisim, 論理ゲート, 回路]
-published: false
+topics: [Logisim, 論理ゲート, 基本情報技術者試験, 応用情報技術者試験]
+published: true
 ---
 
 # はじめに
