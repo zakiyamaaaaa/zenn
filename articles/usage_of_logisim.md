@@ -13,7 +13,7 @@ published: false
 
 応用情報技術者試験　平成２２年秋季　問22
 
-![](/images/usage_of_logisim.md/image1.png)
+![](/images/usage_of_logisim/image1.png)
 
 まず、これら論理ゲートの形がどの論理機能であるかを覚える必要があります。
 正直覚えてしまえばなんてことないのですが、覚えるだけでは物足りなさを感じますし、試験のためだけに覚えても結局忘れてしまうことが少なからずあると思います。
@@ -32,7 +32,7 @@ OS: MacOS Ventura ver 13.5.2
 # Logisimの使い方
 それでは早速ダウンロードしたアプリを開いてみましょう
 
-![](/images/usage_of_logisim.md/image2.png)
+![](/images/usage_of_logisim/image2.png)
 
 非常にシンプルなアプリケーションになっています。
 使うのは基本的に左上のアイコンのところと、一番大きいエリアのところです。
@@ -51,18 +51,18 @@ ANDゲートの真理値表は次の通りです。
 
 まずはANDゲートを作成します。左上のアイコンのANDゲートをクリックし、論理ゲートエリアをクリックして配置します。
 
-![](/images/usage_of_logisim.md/image3.png)
+![](/images/usage_of_logisim/image3.png)
 
 次に入力を作っていきます。今回は入力が２つなので、２つの入力を設定します。
 
-![](/images/usage_of_logisim.md/image4.png)
+![](/images/usage_of_logisim/image4.png)
 
 次に出力を作ります。出力は１つです。
-![](/images/usage_of_logisim.md/image5.png)
+![](/images/usage_of_logisim/image5.png)
 
 
 これらのパーツを繋げていきます。左上の矢印アイコンをクリックして、回路を繋げていきます。
-![](/images/usage_of_logisim.md/image6.png)
+![](/images/usage_of_logisim/image6.png)
 
 図のように、入力が0のときに出力が0になっていればOKです。
 
@@ -72,7 +72,7 @@ ANDゲートの真理値表は次の通りです。
 これで、論理ゲートエリアの入力パーツを0→1と変えることが出来ます。
 入力を２つとも1にすると、出力が1になることが確認出来るかと思います。
 
-![](/images/usage_of_logisim.md/image7.png)
+![](/images/usage_of_logisim/image7.png)
 
 1になっている回路は黄緑、0は緑になっているので、視覚的にもわかりやすいと思います。
 
@@ -83,7 +83,7 @@ Logisimの便利な点として、論理ゲートから真理値表を作成、�
 メニューのProject→Analyze Circuitで解析画面がでてきます。
 ここでTableを選択すると、回路の真理値表が見ることが出来ます。
 
-![](/images/usage_of_logisim.md/image8.png)
+![](/images/usage_of_logisim/image8.png)
 
 ## 真理値表から論理ゲートを作成する
 先ほど表示した真理値表の出力を変化させて、真理値表から論理ゲートを作成することができます。
@@ -100,17 +100,17 @@ NANDは次のような真理値表になります。
 
 出力値をクリックすると、0→1のように変更できます。
 
-![](/images/usage_of_logisim.md/image9.png)
+![](/images/usage_of_logisim/image9.png)
 
 下のBuild Circuitボタンを選択します。
 
-![](/images/usage_of_logisim.md/image10.png)
+![](/images/usage_of_logisim/image10.png)
 
 はい！一応作成はできました。しかし、NOTのあとにORを作るという感じで、意図したNANDゲートにはなってないですね。。。
 作成アルゴリズムは最適な回路図というわけではないので、回路図の自動生成についてはそこまでだと思います。あくまで真理値表を満たすゲートを作成する感じです。
 Build Circuitボタンを押した後の設定画面でUse NAND onlyにチェックすると、NANDゲートで作成してくれます。
 
-![](/images/usage_of_logisim.md/image11.png)
+![](/images/usage_of_logisim/image11.png)
 
 # まとめ
 - 論理ゲートを触ってみたい人はLogisimがいいぞ！
