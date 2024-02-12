@@ -22,12 +22,14 @@ https://docs.flutter.dev/deployment/flavors
 自分も最初Flavorsのみを使ったビルド環境切替をやろうとしましたが、結構設定が複雑でした。
 その他にも、ビルド環境を切り替えにFlutter3.7より導入された`--dart-define-from-file`が結構使われており、[Gbolahanさんの記事](https://gboliknow.medium.com/efficiently-configuring-your-flutter-app-with-dart-define-from-file-604d9bd49e7b)によると、--dart-define-from-filesは開発者が設定ファイルから環境変数をロードすることを可能にする代替アプローチを提供し、サードパーティのパッケージや手動更新なしで簡単に管理し、セキュリティを確保することができます。今回はこちらを採用してのビルド環境の切替を行いました。
 ※似た引数として、`--dart-define`がありますが、`--dart-define`を改良したものが`--dart-define-from-file`です。
-[おかやまんさんの記事](https://zenn.dev/blendthink/articles/392607db0a65dd)から引用すると、`--dart-define`には次のような課題がありました。
+[おかやまんさんの記事](https://zenn.dev/blendthink/articles/392607db0a65dd)から引用した`--dart-define`の欠点です。
 
-- 多くの定義がある場合、起動コマンドが非常に長くなってしまう
-- 切り替えるパッケージが複数ある場合、保守が困難になる
-- これらの定義を Android と iOS で直接利用しようとすると、それぞれで Base64 でデコードしなければならない
-これらの課題を解決するために導入されました。
+>`--dart-define`には次のような課題がありました。
+>
+> - 多くの定義がある場合、起動コマンドが非常に長くなってしまう
+> - 切り替えるパッケージが複数ある場合、保守が困難になる
+> - これらの定義を Android と iOS で直接利用しようとすると、それぞれで Base64 でデコードしなければならない
+> これらの課題を解決するために導入されました。
 
 この記事のタイトルにもあるように`--dart-define-from-file`を用いて、Flutterでのビルド環境を分けていきます。
 ちなみにビルドの設定などはVSCodeをもとにしています。
@@ -209,7 +211,7 @@ VSCodeの左側のビルドメニューを選択し、`launch.jsonファイル�
 VSCodeでビルドの環境を変更する場合は、左側のビルドメニューを選択し、実行とデバッグのところで切り替えができます。
 
 ## Androidリリース用ビルドをする際の注意点
-Androidアプリを公開する場合は、flutter build appbundleとしてappbundleを生成する必要があります。しかし、この場合flavorを参照しないので、エラーとなるため、次のような形でflavorを参照してターミナルからビルドしましょう。
+Androidアプリを公開する場合は、flutter build appbundleとしてApp Bundleファイル（拡張子.aab）を生成する必要があります。しかし、この場合flavorを参照せずビルドエラーとなるため、次のような形でflavorを参照するようにビルドしましょう。
 
 ```bash
 flutter build appbundle --dart-define-from-file=flavor/prod.json
