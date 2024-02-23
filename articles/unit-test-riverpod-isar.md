@@ -151,6 +151,8 @@ https://twitter.com/yamazaking0
 
 # 参考にさせていただいた記事
 
+https://zenn.dev/riscait/books/flutter-riverpod-practical-introduction/viewer/test
+
 https://zenn.dev/laiso/articles/cfff69685553753ee378
 
 https://qiita.com/teriyaki398_/items/642be2f0ed1e87d8ae38
