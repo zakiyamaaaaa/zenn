@@ -7,21 +7,19 @@ published: false
 ---
 
 # はじめに
-最近のAIの成長速度はすさまじいものがありますが、iOSでも以前から機械学習、AIには力をいれてました。
-そこで今回はオンデバイスで動作するCoreMLとVisionKitを利用してのテキスト認識をやってみたいと思います。
-まずは、今回説明するCoreMLとVisionKitの簡単な説明をします。
+近年、人工知能(AI)技術の進化は目覚ましいものがあります。AppleはSiriをはじめ、従来から機械学習やAIの分野に注力してきました。今回は、オンデバイス上で実行可能なCoreMLとVisionKitを用いて、iPhoneでのテキスト認識の実装を試みたいと思います。
 
-## CoreML
+## Core ML
 iOS 13~の機能でデバイス上で動作します。
-``"*Core MLは、Appleのハードウェアを活用し、メモリ占有量と電力消費量を最小限に抑えながら、幅広い種類のモデルがオンデバイスでパフォーマンスを発揮できるよう最適化されています。"*`` [Apple公式](https://developer.apple.com/jp/machine-learning/core-ml/)
+*"Core MLは、Appleのハードウェアを活用し、メモリ占有量と電力消費量を最小限に抑えながら、幅広い種類のモデルがオンデバイスでパフォーマンスを発揮できるよう最適化されています。"* [Apple公式](https://developer.apple.com/jp/machine-learning/core-ml/)
 また、PyTorchなどのフレームワークで作成したモデルでも使えるようです。以前はデバイスの性能不足で一般向けには満足したものは作りづらい印象でしたが、デバイスの性能は年々向上しており、Core ML自体もアップデートされているので、今後利用シーンは増えていくと予想されます。
 
 まだ詳しく使ってはないのですが、Xcode上でモデルの挙動やパフォーマンスを検証できます。
-![](/images/visionkit-coreml-number-recognition/image0.png =300x)
+![](/images/visionkit-coreml-number-recognition/image0.png)
 
 ## VisionKit
-iOS 13~の機能でこちらもデバイス上で動作します。CoreMLとの違いは画像認識に特化した機能ということです。
-``"Identify and extract information in the environment using the device’s camera, or in images that your app displays.(デバイスのカメラを使用して環境内の情報、またはアプリが表示する画像内の情報を識別して抽出します。)"`` [Apple公式](https://developer.apple.com/documentation/visionkit)
+iOS 13~の機能でこちらもデバイス上で動作します。Core MLとの違いは画像認識に特化した機能ということです。
+*"Identify and extract information in the environment using the device’s camera, or in images that your app displays.(デバイスのカメラを使用して環境内の情報、またはアプリが表示する画像内の情報を識別して抽出します。)"* [Apple公式](https://developer.apple.com/documentation/visionkit)
 
 カメラ上のテキストやバーコードなどをほぼ遅延なく認識できたりします。
 結構クレジットカードの番号入力省略とかの機能を既存アプリでも使っていたりしているので、こちらのほうがプロダクトに採用しているところが多い印象です。
@@ -36,7 +34,7 @@ https://developer.apple.com/videos/play/wwdc2023/10048/
 それでは、今回の実装について説明していきます。
 
 ### 主な使用技術
-- CoreML
+- Core ML
 - VisionKit
 - PencilKit
 
@@ -88,12 +86,12 @@ struct CanvasView: UIViewRepresentable {
 
 このモデルを選択すると、↓のようにモデルの情報を見ることが出来ます。
 
-![](/images/visionkit-coreml-number-recognition/image2.png =300x)
+![](/images/visionkit-coreml-number-recognition/image2.png)
 
 Previewでは実際に画像をドラッグ＆ドロップして、精度を見ることが出来ます。
 （あれ、5:信頼度100%となっている・・・・）
 
-![](/images/visionkit-coreml-number-recognition/image3.png =300x)
+![](/images/visionkit-coreml-number-recognition/image3.png)
 
 ### 画像認識部分の実装
 今回のケースでは、
@@ -102,7 +100,7 @@ Previewでは実際に画像をドラッグ＆ドロップして、精度を見�
 3. 使用する画像の取得
 4. ハンドラーからリクエストを実行
 という流れになります。
-CoreMLとVisionKitの違いとしてはVisionKitの場合はリクエストのところにすでに標準で用意された画像認識用等のAPIがあるので、モデルを定義する必要はありません。
+Core MLとVisionKitの違いとしてはVisionKitの場合はリクエストのところにすでに標準で用意された画像認識用等のAPIがあるので、モデルを定義する必要はありません。
 
 ### 1.モデルを定義
 `VNCoreMLModel`のあとに使用するモデル名でモデルを指定します。
@@ -303,13 +301,16 @@ https://note.com/sab_swiftlin/n/n9f1df57281b4
 
 ![](/images/visionkit-coreml-number-recognition/visionkit_sample.gif)
 
-そこまで精度は悪くないまでも、数字以外のテキストへ認識されてしまったりしますね。ここらへんは認識候補から一番信頼度の高い数字のみ取り出す、という方法をとるなどすればもっとうまくいきそうです。
+そこまで精度は悪くないまでも、数字以外のテキストへ認識されてしまったりしますね。数字の１についても、lやIと似ているため、一文字などコンテキストがない状態では、正しく認識するのは難しそうです。
+ここらへんは認識候補から一番信頼度の高い数字のみ取り出す、という方法をとるなどすればもっとうまくいきそうです。
 
 ## まとめ
 当初の目的だった手書きからの数字の認識というのは、現在のモデルでは精度としてあまり実用に耐えれるレベルではないな、と思いました。しかし、AIや機械学習の分野の成長速度は凄まじいので、おそらくそう遠くない未来にはここらへんが解決されていると思います。
 お読みいただきありがとうございました。
 
-## 参考にした記事とか
+## 参考にさせていただいた記事とか
 https://developer.apple.com/jp/machine-learning/core-ml/
 
 https://developer.apple.com/documentation/visionkit
+
+https://note.com/sab_swiftlin/n/n9f1df57281b4
