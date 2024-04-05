@@ -13,18 +13,18 @@ OneSignalを利用してPush通知を簡単に実装してみる。アプリ側�
 https://onesignal.com/
 
 OneSignalは、次のようなさまざまなチャネルにメッセージを送信して、ユーザーの関心を維持できるツールです。
-* プッシュ通知
-* SMS
-* メール
-* アプリ内通知
+- プッシュ通知
+- SMS
+- メール
+- アプリ内通知
 
-今回はこのなかのプッシュ通知を扱います。
+今回はプッシュ通知を扱います。
 
-もともと[Supabase](https://supabase.com/)というFirebaseの代替となるオープンソースサービスの評判がよく、FirebaseにあるFCM（Firebase Cloud Messaging）メッセージの代替となるプッシュ通知サービスが今回扱うOneSignalとなります。
+もともと[Supabase](https://supabase.com/)というオープンソースサービスの評判がよく、こちらと連携がしやすいと言われているメッセージングサービスが今回扱うOneSignalとなります。
 
 https://supabase.com/partners/integrations/onesignal
 
-フロント側はモバイルからWebに対応しており、今回の記事ではFlutterを採用しています。
+モバイルからWebに対応しており、今回の記事ではFlutterを採用しています。
 料金体系は下記のようになっており、無料プランでも１万通/月のメール送信、モバイルプッシュ通知は制限なしとなります。そのため最初に試すハードルが低いのも魅力の一つです。
 
 ![](/images/onesignal-push-notification/image1.png)
@@ -43,7 +43,7 @@ OneSignal上のアプリ名や所属組織を入力し、最初の配信チャ�
 
 次のページに進むと、証明書の設定を行います。
 
-### .p8証明書の設定
+### p8証明書の設定
 `.p8 Auth Key Recommend`の設定を行います。
 
 1. ブラウザから https://developer.apple.com/ にアクセスし「Account」へ（うまくいかない場合はSafariを使ってください）
@@ -64,6 +64,7 @@ OneSignal上のアプリ名や所属組織を入力し、最初の配信チャ�
 
 Key IDには先ほど.p8ファイルをダウンロードしたページに記載されたものを使用します。
 Team IDはApple Developerアカウントのページで確認できます。
+https://developer.apple.com/account のページを下にスクロールするとTeam IDの記載があります。
 
 ![](/images/onesignal-push-notification/image5.png)
 
@@ -81,8 +82,6 @@ https://developer.apple.com/account/resources/identifiers/list
 
 https://documentation.onesignal.com/docs/ios-customizations
 
-https://developer.apple.com/account のページを下にスクロールするとTeamIDの記載があります。
-
 次のページへ進むと使用するプラットフォームを選択するページとなります。
 
 ![](/images/onesignal-push-notification/image6.png)
@@ -91,6 +90,7 @@ https://developer.apple.com/account のページを下にスクロールする�
 
 これでOneSignal側のPush Notification事前設定が終わりました。
 次のページにすすむと、OneSignal向けのIDやFlutterのドキュメントがあります。
+**Flutter SDKセットアップドキュメント**
 
 https://documentation.onesignal.com/docs/flutter-sdk-setup
 
@@ -210,6 +210,7 @@ class NotificationService: UNNotificationServiceExtension {
     }  
 }
 ```
+::::details
 :::message
 ちなみにここで私はハマりました。
 import OneSignalExtensionのところでNo such module~と出て該当のライブラリが認識されてません。という内容のエラーです。
@@ -217,11 +218,12 @@ import OneSignalExtensionのところでNo such module~と出て該当のライ�
 
 https://documentation.onesignal.com/docs/troubleshooting-ios
 
-ただEmbedded frameworkに追加するところで該当のOneSignalのフレームワークが出てこず、悩んでいたところ、iOS SetupのほうにSwift Package Managerを利用して追加する方法が書かれていました。（Flutterにも書いて・・・）
+しかし、Embedded frameworkに追加するところで該当のOneSignalのフレームワークが出てこず、悩んでいたところ、iOS SetupのページにSwift Package Managerを利用して追加する方法が書かれていました。（Flutterにも書いて・・・）
 
 以下Swift Package Managerを使用したやり方です。
 OneSignal SDK は Swift パッケージとして追加できます (Objective-C でも動作します)。
-パッケージの URL を入力します: https://github.com/OneSignal/OneSignal-XCFramework 依存関係ルールが次のメジャー バージョンまでに設定されていることを確認します。 「パッケージの追加」をクリックします
+パッケージの URL を入力します: https://github.com/OneSignal/OneSignal-XCFramework 
+依存関係ルールが次のメジャー バージョンまでに設定されていることを確認します。 「パッケージの追加」をクリックします
 
 これでEmbedded frameworkのほうにも追加できるようになりました。
 
@@ -236,9 +238,10 @@ OneSignal SDK は Swift パッケージとして追加できます (Objective-C 
 ※Pods_One〜のライブラリはビルドすると自動的に入ってくるので、設定するときに入ってる必要はないです
 
 :::
+::::
 
 ここで試しにビルドしてみてエラーが生じなければここまでの過程は完了です。
-自分の場合は上記のWarningのところで書いたように、OneSignalのライブラリを読み込むところに若干ハマり、その次にcoccoapodsがうまく動かないエラーに遭遇しました。cocoapodsについては今回のトピックからずれるのでここでは割愛させていただきます。
+自分の場合は上のところで書いたように、OneSignalのライブラリを読み込むところに若干ハマり、その次にCoccoaPodsがうまく動かないエラーに遭遇しました。CocoaPodsについては今回のトピックからずれるのでここでは割愛させていただきます。
 
 ## Flutter側の実装
 iOS 11~、Xcode14が必須となります。
@@ -276,7 +279,7 @@ OneSignal.Notifications.requestPermission(true);
 
 ここまでできたら、一度ビルドしてみて通知を許可しましょう。
 
-![](/images/onesignal-push-notification/image8.png)
+![](/images/onesignal-push-notification/image8.png =300x)
 
 これによって、OneSignal管理画面でSubscriptionのユーザーとして登録されます。
 お疲れ様でした！実装はこんな感じで終わりです！
@@ -306,7 +309,7 @@ OneSignalの管理ページからMessages-Pushを選択し、右上のNew Messag
 ここでチェックボックスにチェックをいれ、右下の「Send Test Push」ボタンを押してみましょう。
 ここまで完了していれば、さきほど登録したデバイスにプッシュ通知が届くはずです。
 
-![](/images/onesignal-push-notification/image11.png)
+![](/images/onesignal-push-notification/image11.png =300x)
 
 なお、今回はSimulatorで試してみましたが、簡単に実行することができました。実機テストが好ましいですが、シミュレーターでぱぱっと試してみるぶんにはこれでいいと思います。
 
