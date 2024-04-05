@@ -210,9 +210,8 @@ class NotificationService: UNNotificationServiceExtension {
     }  
 }
 ```
-::::details
+::::details　ちなみにここで私はハマりました
 :::message
-ちなみにここで私はハマりました。
 import OneSignalExtensionのところでNo such module~と出て該当のライブラリが認識されてません。という内容のエラーです。
 調べてみると公式のほうでもトラブルシューティングとして対応内容が書いてありました。
 
@@ -245,6 +244,7 @@ OneSignal SDK は Swift パッケージとして追加できます (Objective-C 
 
 ## Flutter側の実装
 iOS 11~、Xcode14が必須となります。
+※Android：「Google Play ストア (サービス)」がインストールされている Android 5.0 以降のデバイスまたはエミュレータ
 
 ### packageの追加
 Onesignalのパッケージを追加します。
@@ -261,10 +261,12 @@ import 'package:onesignal_flutter/onesignal_flutter.dart';
 ```
 
 ### 初期化
-Flutterのほうに戻り、OneSignalを初期化します。これによって、通知を受け取る準備ができます。
+OneSignalを初期化し、通知を受け取る準備ができます。
 次のコードで通知許可ダイアログを表示します。
 ここでは例として`main.dart`に書いています。
 `YOUR APP ID HERE`のところはOneSignalのページで設定完了したときに表示されるIDを入力します。
+
+![](/images/onesignal-push-notification/image7-5.png)
 
 ```dart:main.dart
 //Remove this method to stop OneSignal Debugging 
@@ -281,7 +283,7 @@ OneSignal.Notifications.requestPermission(true);
 
 ![](/images/onesignal-push-notification/image8.png =300x)
 
-これによって、OneSignal管理画面でSubscriptionのユーザーとして登録されます。
+これでOneSignal管理画面でSubscriptionのユーザーとして登録されます。
 お疲れ様でした！実装はこんな感じで終わりです！
 
 ## 通知を送信する
