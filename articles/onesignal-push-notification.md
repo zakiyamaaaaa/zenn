@@ -5,15 +5,6 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, onesignal, ios]
 published: false
 ---
-目次
-# 記事概要
-# 本編
-## OneSignalとは
-(Firebase could messagingとの比較)
-## OneSignalの設定
-## Flutter側の設定
-## 通知テストをしてみる
-
 
 # 記事概要
 OneSignalを利用して、Push通知を簡単に実装してみる。アプリ側はFlutterを使い、OSはiOS。（今後Androidのほうも書き足す予定）
