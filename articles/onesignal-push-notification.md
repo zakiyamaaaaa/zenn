@@ -7,11 +7,12 @@ published: false
 ---
 目次
 # 記事概要
-# OneSignalとは
+# 本編
+## OneSignalとは
 (Firebase could messagingとの比較)
-# OneSignalの設定
-# Flutter側の設定
-# 通知テストをしてみる
+## OneSignalの設定
+## Flutter側の設定
+## 通知テストをしてみる
 
 
 # 記事概要
@@ -37,7 +38,8 @@ https://supabase.com/partners/integrations/onesignal
 
 ![](/images/onesignal-push-notification/image1.png)
 
-# OneSignalの設定
+# 本編
+## OneSignalの設定
 [OneSignalのページ](https://onesignal.com/)から、アカウント登録をします。
 
 アカウントを登録してログインするとどのようなタイプのアプリなのか、どのような機能を使うのかなど聞かれるので入力します。
@@ -50,7 +52,7 @@ https://supabase.com/partners/integrations/onesignal
 
 次のページに進むと、証明書の設定を行います。
 
-## .p8証明書の設定
+### .p8証明書の設定
 `.p8 Auth Key Recommend`の設定を行います。
 
 1. ブラウザからhttps://developer.apple.com/ にアクセスし「Account」へ（うまくいかない場合はSafariを使ってください）
@@ -61,7 +63,7 @@ https://supabase.com/partners/integrations/onesignal
 
 4. これでよければ次に進み、.p8ファイルをダウンロードします。このときKEY IDはあとで使うのでどこかにメモしてください
 
-## Apple iOS (APNs) Configuration
+### Apple iOS (APNs) Configuration
 
 ![](/images/onesignal-push-notification/image4.png)
 
@@ -94,13 +96,13 @@ https://documentation.onesignal.com/docs/flutter-sdk-setup
 
 Flutter側の実装内容はこちらのドキュメントを日本語に翻訳したものが主になります。
 
-# iOS setup
+## iOS setup
 
 プロジェクトの ios フォルダーにある .xcworkspace ファイルを Xcode で開きます。 ルート プロジェクト > メイン アプリ ターゲット > 署名と機能を選択します。 プッシュ通知が有効になっていない場合は、[+ 機能] をクリックしてプッシュ通知を追加します
 
 もう一度 [+ 機能] をクリックし、バックグラウンド モードを追加します。次に、リモート通知を確認します。
 
-## 通知サービス拡張機能の追加
+### 通知サービス拡張機能の追加
 OneSignalNotificationServiceExtensionを使用すると、iOSアプリケーションで画像、ボタン、バッジを使ったリッチな通知を受け取ることができます。また、OneSignalのConfirmed Delivery分析機能にも必要です。
 
 Xcode で File > New > Target... を選択します。
@@ -111,7 +113,7 @@ Notification Service Extensionを選択し、Nextをクリックします。
 
 OneSignalNotificationServiceExtension ターゲットと全般設定を選択します。 [最小デプロイメント] をメイン アプリケーション ターゲットと同じ値に設定します。これは iOS 11 以降である必要があります。
 
-## App Groupsに追加
+### App Groupsに追加
 アプリ グループを使用すると、アプリがアクティブでない場合でも、通知を受信したときにアプリと OneSignalNotificationServiceExtension が通信できるようになります。これはバッジと確認済み配達に必要です。
 
 Select your Main App Target > Signing & Capabilities > + Capability > App Groups.
@@ -128,7 +130,7 @@ App Groupsのコンテナをgroup.YOUR_BUNDLE_IDENTIFIER.onesignalに設定し�
 
 OneSignalNotificationServiceExtensionは含めないでください。
 
-## Add OneSignal SDK to the OneSignalNotificationServiceExtension
+### Add OneSignal SDK to the OneSignalNotificationServiceExtension
 
 Podfileに次のコードを追加します。
 
@@ -224,10 +226,10 @@ OneSignal SDK は Swift パッケージとして追加できます (Objective-C 
 ここで試しにビルドしてみてエラーが生じなければここまでの過程は完了です。
 自分の場合は上記のWarningのところで書いたように、OneSignalのライブラリを読み込むところに若干ハマり、その次にcoccoapodsがうまく動かないエラーに遭遇しました。cocoapodsについては今回のトピックからずれるのでここでは割愛させていただきます。
 
-# Flutter側の実装
+## Flutter側の実装
 iOS 11~、Xcode14が必須となります。
 
-## packageの追加
+### packageの追加
 Onesignalのパッケージを追加します。
 
 ```pubspec.yaml
@@ -241,7 +243,7 @@ dependencies:
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 ```
 
-## 初期化
+### 初期化
 Flutterのほうに戻り、OneSignalを初期化します。これによって、通知を受け取る準備ができます。
 次のコードで通知許可ダイアログを表示します。
 ここでは例として`main.dart`に書いています。
@@ -265,7 +267,7 @@ OneSignal.Notifications.requestPermission(true);
 これによって、OneSignal管理画面でSubscriptionのユーザーとして登録されます。
 お疲れ様でした！実装はこんな感じで終わりです！
 
-# 通知を送信する
+## 通知を送信する
 それでは最後に確認としてテスト通知を配信したいと思います。
 OneSignalの管理ページからMessages-Pushを選択し、右上のNew Messageから「New Push」を選択します。
 1. Audience
