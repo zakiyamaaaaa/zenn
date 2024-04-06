@@ -210,8 +210,9 @@ class NotificationService: UNNotificationServiceExtension {
     }  
 }
 ```
-::::details　ちなみにここで私はハマりました
+::::details　No such module 'OneSignal'
 :::message
+ちなみにここで私はハマりました
 import OneSignalExtensionのところでNo such module~と出て該当のライブラリが認識されてません。という内容のエラーです。
 調べてみると公式のほうでもトラブルシューティングとして対応内容が書いてありました。
 
