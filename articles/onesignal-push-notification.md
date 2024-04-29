@@ -317,7 +317,7 @@ OneSignalの管理ページからMessages-Pushを選択し、右上のNew Messag
 
 なお、今回はSimulatorで試してみましたが、簡単に実行することができました。実機テストが好ましいですが、シミュレーターでぱぱっと試してみるぶんにはこれでいいと思います。
 
-### 追記：error: Embedded binary's bundle identifier is not prefixed with the parent app's bundle identifier.
+## 追記：error: Embedded binary's bundle identifier is not prefixed with the parent app's bundle identifier.
 
 親アプリのBundle IDが埋め込みバイナリのBundleIDに含まれてない、というエラーが出ました。
 今回設定したアプリでは、ビルド環境によって状態を切り替える``dart-define-from-file``を用いています。
