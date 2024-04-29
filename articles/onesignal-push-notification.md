@@ -317,6 +317,28 @@ OneSignalの管理ページからMessages-Pushを選択し、右上のNew Messag
 
 なお、今回はSimulatorで試してみましたが、簡単に実行することができました。実機テストが好ましいですが、シミュレーターでぱぱっと試してみるぶんにはこれでいいと思います。
 
+### 追記：error: Embedded binary's bundle identifier is not prefixed with the parent app's bundle identifier.
+
+親アプリのBundle IDが埋め込みバイナリのBundleIDに含まれてない、というエラーが出ました。
+今回設定したアプリでは、ビルド環境によって状態を切り替える``dart-define-from-file``を用いています。
+そのため、ビルド環境によって、Bundle IDが異なるようになっています。例えばデバッグでは、hogehoge.devという感じでsuffixがついてきます。
+このエラーは当初、↑の設定をしているときには出てこず、日がたった後に出てきたので、Xcodeかなにかのバージョンアップに伴ったものかもしれません。
+
+次の点を確認してみましょう
+* Bundle Identifier
+環境ごとにビルド設定を自動的に変更するため、親アプリと同じ設定をする必要があります
+
+Xcodeで該当のRunnerファイルを開いて、``Targets>Build Settings>Packaging>Product Bundle Identifier``を親アプリ（ここでは本来のアプリ）のBundle Identifierの設定と同じようにします。
+
+* Configurations
+PROJECT>RUNNER>Info>Configurations
+OneSignalのExtensionsでここの設定をRunnerと同じようにしましょう。
+（画像でDebugとしています）
+
+![](/images/onesignal-push-notification/image12.png)
+
+これでビルドしてみると、エラーが消えているかと思います。
+
 # まとめ
 今回は時間の都合上iOSのみでのプッシュ通知テストをやってみました。思ったよりも簡単にできて、公式のドキュメントも整備されており、とてもスムーズに行うことができました。Androidのほうも別に設定して、Flutterで即座に使うことができると思いますので、有力なメッセージングツールとしてOneSignalが有用だと思います。
 
