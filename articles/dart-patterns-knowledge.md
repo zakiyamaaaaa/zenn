@@ -48,8 +48,9 @@ switch (list) {
 | Wildcard | _ |
 | Records | (subpattern1, subpattern2) |
 
-
+:::message
 RecordsはDart 3.10から導入された型で、他の言語ではタプル型に相当します。Typeの違うpatternを入れることができます。
+:::
 
 ```dart
 final records = (111, ‘aaa’);
