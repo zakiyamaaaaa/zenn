@@ -3,7 +3,7 @@ title: "Dartにおけるパターンを理解する"
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['dart', 'flutter']
-published: false
+published: true
 ---
 
 # はじめに
@@ -50,11 +50,12 @@ switch (list) {
 
 :::message
 RecordsはDart 3.10から導入された型で、他の言語ではタプル型に相当します。Typeの違うpatternを入れることができます。
-:::
 
 ```dart
 final records = (111, ‘aaa’);
 ```
+:::
+
 ## パターンの使う場面
 Dart言語では、さまざまなところでパターンを使うことができます
 * ローカル変数の宣言や割当
