@@ -17,14 +17,15 @@ Dartにおけるパターンは、ステートメントや式と同様、Dart �
 パターンの主な機能としては次の２つになります。
 * データの照合
 * データをより小さな変数に分割
+
 １つ目のデータの照合は、先程の概要で説明した内容と重複するため、ここでは２つ目の機能について具体的に説明します。
-この機能は、英語ではいわゆるDestructureと言われるもので、パターンが一致すると、パターンはオブジェクトのデータにアクセスし、それを部分的に抽出することができます。言い換えると、パターンはオブジェクトを分割し、再構造ができます。
+この機能は、英語ではいわゆるDestructureと言われるもので、パターンが一致すると、オブジェクトのデータにアクセスし、それを部分的に抽出することができます。言い換えると、パターンはオブジェクトを分割し、再構造ができます。
 
 ```dart
 final numList = [1,2,3];
 final [a,b,c] = numList;
 ```
-[a,b,c]がnumListのパターンとマッチしているので、a=1,b=2.c=3というふうにそれぞれ割り当てられます。
+[a,b,c]がnumListのパターンとマッチしているので、`a = 1,b = 2,c = 3`というふうにそれぞれ割り当てられます。
 
 構造化パターンは任意の種類のパターンをネストできます。
 
@@ -41,7 +42,7 @@ switch (list) {
 | Pattern Type | Example |
 | ---- | ---- |
 | Const | Null, true, false, const 1, ‘abc’ |
-| List | [‘a’ || ‘b’, var c] |
+| List | [‘a’ \|\| ‘b’, var c] |
 | Map | {‘key’: subpattern} |
 | Object | MyClass(…) |
 | Wildcard | _ |
@@ -56,8 +57,8 @@ final records = (111, ‘aaa’);
 ## パターンの使う場面
 Dart言語では、さまざまなところでパターンを使うことができます
 * ローカル変数の宣言や割当
-* Forループ
 * ifやswitchケース
+* forループ
 * コレクションリテラル
 
 ### ローカル変数の宣言・割当
@@ -81,9 +82,9 @@ print(c) // true
 ```
 
 どちらも同じ結果となりました。
-ただ、List ≠ Recordなため、final (a,b,c) = [1,’a’, true]はエラーとなります
+ただ、List ≠ Recordなため、`final (a,b,c) = [1,’a’, true]`はエラーとなります
 
-ここで、変数宣言するときの修飾子ではvar,finalが使用可能で、constは使えません
+ここで、変数宣言するときの修飾子ではvar, finalが使用可能で、constは使えません
 
 ```dart
 const (a,b,c) = (1,’a’,true); // ERROR
@@ -92,12 +93,12 @@ const (a,b,c) = (1,’a’,true); // ERROR
 変数の割当を次の例に示します。まず、マッチしたオブジェクトを分割します。次に、新しい変数をバインドするのではなく、既存の変数に値を代入します。これによって、ダミー変数のように余分な変数を使う必要がありません
 
 ```dart
-final (a,b) = (“left’, ‘right)
+final (a,b) = ('left', 'right');
 (b,a) = (a,b) //swap
 ```
 
 ### Switch構文・Switch式
-最もパターンを使用するすべてのcase節にはパターンが含まれます。
+すべてのcase節にはパターンが含まれます。
 Switch構文
 
 ```dart
@@ -124,14 +125,15 @@ switchやif-case文に使うことができ、caseにはどのようなパター
 
 ```dart
 switch (obj) {
- case PATTERN_1:
+	case PATTERN_1:
 // code
-case PATTERN_2:
+	case PATTERN_2:
 // other code
 }
 
 
 if (variable case PATTERN) {
+	//code
 }
 ```
 
@@ -139,8 +141,8 @@ if (variable case PATTERN) {
 
 ```dart
 var yourColor = switch (color) {
-Color.red || Color.blue || Color.green => true,
-_ => false
+	Color.red || Color.blue || Color.green => true,
+	_ => false
 }
 ```
 
@@ -149,25 +151,27 @@ _ => false
 ```dart
 // switch expression
 bool isPrimary = switch (color) {
-Color.red || Color.yellow || Color.blue => true,
-_ => false
+	Color.red || Color.yellow || Color.blue => true,
+	_ => false
 }
 
 // switch statement
-swith (color) {
-case Color.red || Color.yellow || Color.blue:
-isPrimary = true;
-default:
-isPrimary = false
+switch (color) {
+	case Color.red || Color.yellow || Color.blue:
+		isPrimary = true;
+	default:
+		isPrimary = false;
 }
 
 // If-case
-if (color case Color.red || Color.yellow || Color.blue) {isPrimary = true
-} else {
-isPrimary = false}
+if (color case Color.red || Color.yellow || Color.blue) {
+	isPrimary = true;
+		} else {
+	isPrimary = false;
+	}
 ```
 
-switchケースでガード句を使う場合は、キーワードwhenを仕様する。ケースの条件をさらに追加し、評価することができる
+switchケースでガード句を使う場合は、キーワード`when`を仕様します。。ケースの条件をさらに追加し、評価することができます。
 
 ```dart
 switch (pair) {
@@ -175,7 +179,7 @@ switch (pair) {
 	if (a > b) print(“a is greater than b”)
 	// if false, exists the switch
 	case (int a, int b) when a > b:
-	print(‘a is greater than b);
+		print(‘a is greater than b);
 }
 ```
 
@@ -189,23 +193,23 @@ Map<String, String> hist = {
 	‘zh’: ‘yuan’
 }
 for (var MapEntry(key: key, value:count) in hist.entries) {
-print
+	// code
 }
 ```
 
-このオブジェクトパターンは、hist.entriesがMapEntryという名前付き型を持っていることをチェックし、名前付きフィールドのサブパターンkeyとvalueに再帰します。各反復で MapEntry の key ゲッターと value ゲッターを呼び出し、結果をそれぞれローカル変数 key と count にバインドします。
+このオブジェクトパターンは、`hist.entries`が`MapEntry`という名前付き型を持っていることをチェックし、名前付きフィールドのサブパターンkeyとvalueに再帰します。各反復で MapEntry の key ゲッターと value ゲッターを呼び出し、結果をそれぞれローカル変数 key と count にバインドします。
 
 ゲッター呼び出しの結果を同じ名前の変数とすることはよくあることで冗長です。
 そのため、オブジェクトパターンは変数サブパターんからゲッター名を推測することができます。
 
 ```dart
 for (var MapEntry(:key, value:count) in hist.entries) {
-
+	// code
 }
 ```
 
 ## パターンのユースケース
-複数のレコードの値を返す場合は、次のような個別に新しいローカル変数を作るより、複数のレコードのフィールドをまとめて作るほうが良いでしょう
+複数のレコードの値を返す場合は、次のような個別に新しいローカル変数を作るより、複数のレコードのフィールドをまとめて作るほうが良いでしょう。
 
 ```dart
 final info = userInfo(json);
@@ -234,8 +238,8 @@ if (json is Map<String, Object?> &&
 }
 ```
 
-結構たいへんです。しかし、if-caseを使用するともっと簡単になります。単一のケースはif-case文として最適に機能します。
-ここでのパターンの使用はJSONを検証するためのより宣言的で冗長性の低い方法を実現します
+結構たいへんです。しかし、if-caseを使用するともっと簡単になります。単一のケースは`if-case文`として最適に機能します。
+ここでのパターンの使用はjsonを検証するためのより宣言的で冗長性の低い方法を実現します。
 
 ```dart
 if (json case {'user': [String name, int age]}) {
