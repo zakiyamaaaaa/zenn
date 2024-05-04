@@ -7,7 +7,7 @@ published: false
 ---
 
 # はじめに
-この記事ではDart 3.0から導入されたパターン（Patterns）について、（公式のページ）[https://dart.dev/language/patterns]をベースにパターンの中身について説明します。
+この記事ではDart 3.0から導入されたパターン（Patterns）について、[公式のページ](https://dart.dev/language/patterns)をベースにパターンの中身について説明します。
 
 # パターンとは
 
