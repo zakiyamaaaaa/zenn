@@ -142,7 +142,7 @@ class Animal {
       required this.checked});
 }
 ```
-![](/images/listtile-knowledge/image3.png)
+![](/images/listtile-knowledge/image3.png =300x)
 
 * チェックボックスは日本語、英語のように左から右に読む言語では、デフォルトで右に表示されます。これは`controlAffinity`を使って変更することができます。
 
@@ -207,7 +207,7 @@ class Animal {
 }
 ```
 
-![](/images/listtile-knowledge/image4.png)
+![](/images/listtile-knowledge/image4.png =300x)
 
 * ラジオボタンは日本語、英語のように左から右に読む言語では、デフォルトで左に表示されます。これは`controlAffinity`を使って変更することができます。
 * 他のListTileと違うのは、`groupValue`という引数があり、これによって、排他的な選択を実現しています。
@@ -274,7 +274,7 @@ class Animal {
 }
 ```
 
-![](/images/listtile-knowledge/image5.png)
+![](/images/listtile-knowledge/image5.png =300x)
 
 * スイッチボタンは日本語、英語のように左から右に読む言語では、デフォルトで右に表示されます。
 
