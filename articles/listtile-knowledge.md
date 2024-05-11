@@ -3,7 +3,7 @@ title: "【Flutter】様々なListTileを理解する"
 emoji: "🟰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, dart]
-published: false
+published: true
 ---
 
 # ListTileとは
