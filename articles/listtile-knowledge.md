@@ -281,9 +281,9 @@ class Animal {
 #　おわりに
 これまで見てきたListTileの種類をまとめると、次のようになります。
 
-| ListTile |  | CheckBoxListTile | RadioListTile | SwitchListTile |
-| ---- | ---- | ---- |
-| ![](/images/listtile-knowledge/image1.png) | ![](/images/listtile-knowledge/image3.png) | ![](/images/listtile-knowledge/image5.png) | | ![](/images/listtile-knowledge/image5.png) |
+| ListTile | CheckBoxListTile | RadioListTile | SwitchListTile |
+| ---- | ---- | ---- | ---- |
+| ![](/images/listtile-knowledge/image1.png =150x)| ![](/images/listtile-knowledge/image3.png =150x)|![](/images/listtile-knowledge/image4.png =150x)|![](/images/listtile-knowledge/image5.png =150x)|
 
 
 FlutterではListTileのウィジェットが様々あり、シンプルなリストを作成するのがネイティブより簡単な場合があります。
