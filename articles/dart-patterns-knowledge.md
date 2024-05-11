@@ -222,7 +222,7 @@ final (name, age) = userInfo(json);
 ```
 
 ### JSONのバリデーション
-パターンを使わない次のようなコードになります
+JSONのバリデーションを行うケースを考えます。まずはパターンを使わずに記述する例が↓です。
 
 ```dart
 if (json is Map<String, Object?> &&
