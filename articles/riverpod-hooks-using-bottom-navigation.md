@@ -22,7 +22,7 @@ published: false
 それでは、RiverpodとFlutter Hooksでのそれぞれの実装方法について説明していきます。
 こんな感じの画面になります
 
-![](/images/bottomnavigationbar/image1.png)
+![](/images/bottomnavigationbar/image1.png =200x)
 
 
 ## Riverpod
