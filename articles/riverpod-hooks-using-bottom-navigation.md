@@ -7,10 +7,10 @@ published: false
 ---
 
 # はじめに
-この記事はRiverpodやFlutter HooksでのBottomNavigationBarを作成する例をそれぞれご紹介します。
-BottomNavigationBarはアプリによくある下タブですが、これの実装方法を調べると、StatefulWidgetがまず出てきます。最初はこれでもいいのですが、たいていのアプリではRiverpod、Flutter Hooksを導入しているので、これらの技術を使ってもっと簡単に実装できる方法を紹介してきます。
-Riverpodを使って紹介している別記事もあったのですが、StateProviderを使っていたりと情報がちょっと古いのもあり、２０２４年版ということで今回記事にしました。
-Riverpodも先月ver 3.0の情報が発表され、マクロができるようになるなど、進化が目覚ましいですが、今回はRiverpod 2系となります。
+この記事は`Riverpod`や`Flutter Hooks`での`BottomNavigationBar`を作成する例をそれぞれご紹介します。
+`BottomNavigationBar`はアプリによくある下タブですが、これの実装方法を調べると、`StatefulWidget`がまず出てきます。最初はこれでもいいのですが、たいていのアプリではRiverpod、Flutter Hooksを導入しているので、これらの技術を使ってもっと簡単に実装できる方法を紹介してきます。
+`Riverpod`を使って紹介している別記事もあったのですが、`StateProvider`を使っていたりと情報がちょっと古いのもあり、2024年版ということで今回記事にしました。
+`Riverpod`も先日にver 3.0の情報が発表され、マクロができるようになるなど、進化が目覚ましいですが、今回はRiverpod 2系となります。
 
 ## バージョン情報
 * Flutter 3.19
