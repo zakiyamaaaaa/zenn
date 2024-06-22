@@ -111,6 +111,8 @@ class HomeScreen extends ConsumerWidget {
 ```
 
 全体のコードはこちらになります。
+https://github.com/zakiyamaaaaa/BottomNavigationBarExample/tree/master/Example/riverpod_bottom_navigation_example
+
 `pages`とitemsの数が矛盾しているとエラーが起こるので、そこらへんはEnumや別のClassを作って管理してもいいかもしれません。
 
 ## Flutter Hooks
@@ -122,8 +124,10 @@ final index = useState(0);
 ```
 
 コード抜粋を乗せるのも憚れるので、実際に動かしてみたい人はRiverpodのコードで、indexProviderをuseStateに置き換えてください。
+https://github.com/zakiyamaaaaa/BottomNavigationBarExample/tree/master/Example/riverpod_hooks_bottom_navigation_example
 
-今回紹介したコードはこちらにあります。
+
+今回紹介したコードのレポジトリです。
 https://github.com/zakiyamaaaaa/BottomNavigationBarExample
 
 マイペースにつぶやいています。
