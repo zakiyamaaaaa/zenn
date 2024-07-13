@@ -13,11 +13,11 @@ published: false
 これまでは開発元が提供するアプリアイコンのみ使用されていましたが、1OS18/iPadOS18からはユーザーの設定によって、アプリアイコンの外観カラーが変わるようになりました。
 
 ![](/images/ios18-app-icon-adaptation/image1.png)
-WWDC session video
+*WWDC session video*
 
 ## これまでのアイコンとの違い
 ![](/images/ios18-app-icon-adaptation/image2.png)
-Human Interface Guideline
+*Human Interface Guideline*
 
 左から`Light`、`Dark`, `Tinted`のテーマでのアプリアイコンとなります。
 `Tinted`というのは、ユーザーが好きなように設定できるカラーになります。
