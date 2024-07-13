@@ -278,7 +278,7 @@ class Animal {
 
 * スイッチボタンは日本語、英語のように左から右に読む言語では、デフォルトで右に表示されます。
 
-#　おわりに
+##　おわりに
 これまで見てきたListTileの種類をまとめると、次のようになります。
 
 | ListTile | CheckBoxListTile | RadioListTile | SwitchListTile |
@@ -289,5 +289,5 @@ class Animal {
 FlutterではListTileのウィジェットが様々あり、シンプルなリストを作成するのがネイティブより簡単な場合があります。
 それぞれの使い方に応じて適切なListTileを選択し、場合によってはオリジナルのウィジェットでリストを表現することができると良さそうです。
 
-#　参考にさせていただいた記事とか
+##　参考にさせていただいた記事とか
 https://api.flutter.dev/flutter/material/ListTile-class.html
