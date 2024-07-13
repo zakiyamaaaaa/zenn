@@ -31,7 +31,7 @@ Human Interface Guideline
 それでは実際に今回のアップデートにどのように対応していくのかをWWDCのセッションや公式ガイドラインをもとに説明していきます。
 
 :::message
-なお、現時点（２０２４年７月時点）ではベータ版をインストールする必要があるため、Sonoma 14.5としてください。
+なお、現時点（2024年7月時点）ではベータ版をインストールする必要があるため、Sonoma 14.5~推奨です。
 また、今回の検証ではXcode 16.0.0-Beta3を使用しています。
 
 XcodeのインストールはXcodesがおすすめです。[Xcodes](https://www.xcodes.app/)
@@ -65,6 +65,9 @@ XcodeのインストールはXcodesがおすすめです。[Xcodes](https://www.
 
 
 AppleのHuman Interface GuidelineでAppIconの項目がアップデートされているので、詳細についてはこちらをご参考ください。
+
+https://developer.apple.com/design/human-interface-guidelines/app-icons
+
 また、具体的なアプリアイコン例を見たいという方はFigma, Sketch, Photoshopでデザインテンプレートが提供されているので、こちらを参考にするとレイヤー構造など詳細がわかって理解が深まるかと思います。
 
 https://developer.apple.com/design/resources/
@@ -75,7 +78,7 @@ https://developer.apple.com/design/resources/
 1. 画面を長押しした状態で、ホーム画面を編集を選択します。
 2. 編集ボタンを押すと、カスタマイズという項目があります。そこでアプリのサイズやカラーを変更することができます。
 
-:::message alert
+:::message
 iOS18を入れた状態のシミュレーター(or実機)で行ってください
 :::
 
@@ -89,9 +92,9 @@ AppleのHuman Interface Guidelineに則ってAppIconを作っているのであ�
 * アイコン本体が暗色の場合は注意
    ブランド名がアプリアイコンとなっていて、黒い文字に白い背景みたいなアプリを見かけたことがあるかと思います。
 今回のアップデートでこれをそのまま対応すると、Darkの場合、背景が黒となるので視認性がとても悪くなります。
-![](/images/ios18-app-icon-adaptation/sample_light)
-![](/images/ios18-app-icon-adaptation/sample_dark)
-![](/images/ios18-app-icon-adaptation/sample_tinted)
+![](/images/ios18-app-icon-adaptation/sample_light_2.png)
+![](/images/ios18-app-icon-adaptation/sample_dark_2.png)
+![](/images/ios18-app-icon-adaptation/sample_tinted_2.png)
 
 ただ、OS18 Beta3では、自動的にアイコンカラーがいい感じにしてくれていて、Darkの場合はロゴの色を反転するなどしているため、見やすくなっています。
 しかし、なるべくであればアプリ事業側でカラーはコントロールしたいかと思います。
