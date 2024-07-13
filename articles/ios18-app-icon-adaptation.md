@@ -1,4 +1,4 @@
-wd  ---
+---
 title: "iOS/iPadOSアイコンアップデートに備える"
 emoji: "👌"
 type: "tech" # tech: 技術記事 / idea: アイデア
