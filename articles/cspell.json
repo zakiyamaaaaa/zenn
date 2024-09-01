@@ -4,8 +4,15 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "Cocoapods",
+        "jetbrains",
+        "kdoctor",
+        "kotlinx",
+        "Ktor",
+        "Multiplatform",
         "Photoshop",
-        "Sansan"
+        "Sansan",
+        "xcconfig"
     ],
     "ignoreWords": [
         "WWDC",
