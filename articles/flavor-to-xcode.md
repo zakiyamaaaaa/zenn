@@ -8,9 +8,10 @@ published: false
 
 # はじめに
 Flutterでのアプリ開発において、異なる環境を設定する場合には`dart-define-from-file`で`Flavors`を使うケースが多いと思います。
-（dart-define-from-fileについては私が書いたこちらの記事に詳細があります）
+（`dart-define-from-file`については私が書いたこちらの記事に詳細があります）
+https://zenn.dev/yamazaking/articles/dart_define_from_file_to_build
 
-ただプッシュ通知などの使う場合には、iOSの場合はExtensionを追加する必要があり、そのExtensionでBundle Identifierを`Flavors`からビルド環境ごとに切り替えたい、ということがあります。
+しかしプッシュ通知などの使う場合には、iOSの場合はExtensionを追加する必要があり、そのExtensionでBundle Identifierを`Flavors`からビルド環境ごとに切り替えたい、ということがあります。
 そうしたケースでも、切り替えをする方法を説明していきます。
 
 ## やり方
@@ -19,7 +20,7 @@ Flutterでのアプリ開発において、異なる環境を設定する場合�
 こちらの生成については、こちらの記事がわかりやすいです。
 https://zenn.dev/altiveinc/articles/separating-environments-in-flutter
 
-まずは、Extensionのフォルダ内で、File→New→File（もしくは⌘+N）で、`Configuration Settings File`を選択して、`.xcconfig`ファイルを生成してください。
+まずは、Extensionのフォルダ内で、File>New>File（もしくは⌘+N）で、`Configuration Settings File`を選択して、`.xcconfig`ファイルを生成してください。
 ![](/images/flavor-to-xcode/image0.png)
 
 ios/Flutter内の`.xcconfig`（Generated以外のDebug.xcconfigやRelease.xcconfig）と同様の`.xcconfig`ファイルを生成します。
