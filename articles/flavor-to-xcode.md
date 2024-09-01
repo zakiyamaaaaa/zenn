@@ -23,7 +23,7 @@ https://zenn.dev/altiveinc/articles/separating-environments-in-flutter
 まずは、Extensionのフォルダ内で、File>New>File（もしくは⌘+N）で、`Configuration Settings File`を選択して、`.xcconfig`ファイルを生成してください。
 ![](/images/flavor-to-xcode/image0.png)
 
-ios/Flutter内の`.xcconfig`（Generated以外のDebug.xcconfigやRelease.xcconfig）と同様の`.xcconfig`ファイルを生成します。
+RunnerのConfigurationsで設定しているビルド環境ごとの`.xcconfig`ファイルを生成します。
 `PushNotification.Debug.xcconfig`のように生成します。
 生成した.xcconfigファイルに`#include "../Flutter/DartDefined.xcconfig"`として、ios/Flutterの`DartDefines.xcconfig`を参照します。
 
