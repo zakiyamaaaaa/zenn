@@ -1,6 +1,6 @@
 ---
 title: "iOSのExtensionでもFlavorsを使いたい！"
-emoji: "💭"
+emoji: "🍏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Flutter, Flavors, iOS, Xcode]
 published: false
@@ -34,6 +34,9 @@ Runner Projectを選択して、`Info`>`Configurations`にある、各ビルド�
 ### Build identifierの適用
 最後に、ExtensionsのTargetを選択して、Build Settings>Packaging>Product Bundle Identifierで使用したFlavor変数を指定して完成です！
 ![](/images/flavor-to-xcode/image2.png)
+
+ちゃんと適用されてるかどうかを確認するには、該当のExtensionsのTargetを選択し、Signing＆Capabilitiesにある、Bundle Identifierに変数がちゃんと出ているか確認してみてください。先程の設定が完了していれば、自動的に適用されます。
+![](/images/flavor-to-xcode/image3.png)
 
 ## 参考にした記事とか
 https://stackoverflow.com/questions/69808448/setting-ios-today-extension-bundle-version-to-flutter-flutter-build-number/69898579#69898579
