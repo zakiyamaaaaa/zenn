@@ -1,8 +1,8 @@
 ---
-title: ""
-emoji: "📘"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+title: "GitHubスタッフエンジニアに学ぶ効果的なコードレビューの方法について"
+emoji: "👀"
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: [code review]
 published: false
 ---
 
