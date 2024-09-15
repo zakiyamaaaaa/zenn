@@ -13,7 +13,7 @@ published: false
 https://github.blog/developer-skills/github/how-to-review-code-effectively-a-github-staff-engineers-philosophy/
 
 記事の日本語訳は下のほうにまとめていますので、日本語訳を読みたい方はこちらを参照してください。
-なお、このToday I LearnedというPodcastはアメリカでITエンジニアとして働くかたのPodcastで、GAFAに勤務している方の話だったり、日本とは違うアメリカのテック業界の話とかもあったりして、とてもおもしろいので、ご興味ある方はぜひ聞いてみてください。
+なお、このToday I LearnedというPodcastはアメリカで働くITエンジニアsのPodcastで、GAFAに勤務している方の話だったり、日本とは違うアメリカのテック業界の話とかもあったりして、とてもおもしろいので、ご興味ある方はぜひ聞いてみてください。
 https://open.spotify.com/show/0cssyHHR4d8YwUWZGvH8H1
 
 ## 著者について
