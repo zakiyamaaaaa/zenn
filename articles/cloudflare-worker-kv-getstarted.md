@@ -508,6 +508,8 @@ export default {
 
 
 # 参考資料
-* https://developers.cloudflare.com/workers/wrangler/install-and-update/
-* https://qiita.com/api/v2/docs
-* https://qiita.com/koki_develop/items/57f86a1abc332ed2185d
+https://developers.cloudflare.com/workers/wrangler/install-and-update/
+
+https://qiita.com/api/v2/docs
+
+https://qiita.com/koki_develop/items/57f86a1abc332ed2185d
