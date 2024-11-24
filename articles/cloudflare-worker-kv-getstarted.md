@@ -1,5 +1,5 @@
 ---
-title: "LocalでCloudflareのWorker/KVの使用例（Qiita APIを題材に）"
+title: "ローカル環境でCloudflareのWorker/KVの使用例（Qiita APIを題材に）"
 emoji: "🍣"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Cloudflare, TypeScript, Qiita]
@@ -82,16 +82,16 @@ npm create cloudflare@latest -- <WORKER_NAME>
 実行すると、次にどのようなテンプレートを使うかを聞いてきます。
 ここでは、Hello World exampleを選択します。
 
-[質問プロンプトの画像]
+![](/images/cloudflare-worker-kv-getstarted/image5.png)
 
 次にHello Worldテンプレートの使用する種類を聞かれます。
 ここでは、Hello World Workerを選択します。
 
-[質問プロンプトの画像]
+![](/images/cloudflare-worker-kv-getstarted/image6.png)
 使用する言語を選びます。TypeScript,JavaScript,Python(beta)から選択できます。
 ここでは、TypeScriptを選択します。
 
-[使用言語選択の画像]
+![](/images/cloudflare-worker-kv-getstarted/image7.png)
 
 最後にデプロイするかどうかを聞かれます。ここではNoと答えます。
 これで、Workerがローカル環境に作成されます。
@@ -106,16 +106,16 @@ wrangler dev
 
 起動が成功すると、つぎのようなプロンプトがでてきます
 
-[画像]
+![](/images/cloudflare-worker-kv-getstarted/image8.png)
 
-open browserを行うと、Hello World!が表示されるかと思います。
+`[b]open browser`を行うと、`Hello World!`が表示されるかと思います。
 これでWorkerの作成は終わりです。
 
 #### Workerの削除
 削除したい場合はCLI上ではできずダッシュボードで削除を行ってください。
 Workerの詳細ページの設定のところに、削除できる箇所があります。
 
-[削除ボタンのあるページの画像]
+![](/images/cloudflare-worker-kv-getstarted/image9.png)
 
 ### Qiita API
 それではここからQiita APIをリクエストしてレスポンスするWorkerを作成していきます。
@@ -227,7 +227,7 @@ export default {
 
 リクエストに成功すると、こんな感じのレスポンスが表示されると思います。
 
-[QiitaAPIからのレスポンス画像]
+![](/images/cloudflare-worker-kv-getstarted/image10.png)
 
 以上でWorkerにQiitaAPIを使った使用例となるのですが、現在のコードだとアクセストークンがコード内にそのまま含まれていて、セキュリティ的によろしくないです。
 そのためにKVを使う方法と環境変数を利用する方法を説明していきます。
@@ -494,7 +494,7 @@ export default {
 また、環境変数を利用する場合も`wrangler dev --remote`で起動してください。
 成功すると、画面にQiita APIのレスポンスが表示されます。
 
-[成功時の画像]
+![](/images/cloudflare-worker-kv-getstarted/image11.png)
 
 # おわりに
 以上のような形でローカルでのKV/環境変数を用いての簡単なAPIリクエストを返すWorkerの作成ができました。
