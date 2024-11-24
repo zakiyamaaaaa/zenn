@@ -1,12 +1,18 @@
 ---
 title: "ローカル環境でCloudflareのWorker/KVの使用例（Qiita APIを題材に）"
-emoji: "🍣"
+emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Cloudflare, TypeScript, Qiita]
-published: false
+published: true
 ---
 
 # はじめに
+この記事では、ローカル環境でCloudflareのWorkerを扱う方法について説明していきます。
+Cloudflareは最近、というか少し前から有名なサービスでホスティングやドメインの提供などクラウドインフラの様々な機能を提供しています。
+今回はWorkerを利用して、APIサーバーを作成する方法について説明しています。
+普段、あまりインフラ・サーバー側に慣れてない方でもわかりやすい内容となっています。
+結構ローカルの開発環境で実行するところに苦戦して、日本語の参考記事が少なかった印象だったため、こちらの記事が参考になれば幸いです。
+
 ## Worker
 CloudflareでWorkerを作成する方法としては、ダッシュボード上で作成する方法とCLIで作成する方法があります。
 
@@ -20,7 +26,7 @@ Cloudflareに登録して、ダッシュボードのトップを開きます
 
 次のページでは、”Hello World” Workerとなっており、リクエストされたらHello Worldを返すシンプルなWorkerのテンプレートとなっています。
 Workerの名前は適当なものを入力してください。
-ここでは、qiita-api-sandboxとしました。
+ここでは、`qiita-api-sandbox`としました。
 ![](/images/cloudflare-worker-kv-getstarted/image2.png)
 
 下にある展開ボタンを押すと作成完了となります。
@@ -73,23 +79,23 @@ npm install wrangler@latest
 
 #### CLIでWorkerを作成する
 それでは、Wranglerがインストールされた状態でWorkerを作成していきます。
-<WORKER_NAME>にWorkerの名前をいれて、下記のコマンドを実行します。
+`<WORKER_NAME>`にWorkerの名前をいれて、下記のコマンドを実行します。
 
 ```bash
 npm create cloudflare@latest -- <WORKER_NAME>
 ```
 
 実行すると、次にどのようなテンプレートを使うかを聞いてきます。
-ここでは、Hello World exampleを選択します。
+ここでは、`Hello World example`を選択します。
 
 ![](/images/cloudflare-worker-kv-getstarted/image5.png)
 
 次にHello Worldテンプレートの使用する種類を聞かれます。
-ここでは、Hello World Workerを選択します。
+ここでは、`Hello World Worker`を選択します。
 
 ![](/images/cloudflare-worker-kv-getstarted/image6.png)
 使用する言語を選びます。TypeScript,JavaScript,Python(beta)から選択できます。
-ここでは、TypeScriptを選択します。
+ここでは、`TypeScript`を選択します。
 
 ![](/images/cloudflare-worker-kv-getstarted/image7.png)
 
@@ -132,7 +138,7 @@ Qiita APIについては、参考資料に記載していますので、こち�
 
 これをcurlでリクエストします。
 AuthorizationにはBearerを指定します。
-<ACCESS_TOKEN>には先程発行されたアクセストークンをいれてください。
+`<ACCESS_TOKEN>`には先程発行されたアクセストークンをいれてください。
 
 ```bash
 curl -H 'Authorization: Bearer <ACCESS_TOKEN>' 'https://qiita.com/api/v2/items'
@@ -393,7 +399,7 @@ export default {
 
 ```
 
-次にWorkerの起動ですが、KVを扱う場合は次のように--remoteオプションをつけて実行します。
+次にWorkerの起動ですが、KVを扱う場合は次のように`--remote`オプションをつけて実行します。
 これによって、Cloudflareのリモート環境上でWorkerを実行し、KVを参照することが可能となります。
 
 ```bash
