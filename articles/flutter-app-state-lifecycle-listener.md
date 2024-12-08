@@ -1,6 +1,6 @@
 ---
 title: "【Flutter】AppLifecycleStateとAppLifecycleListenerの挙動の違いについて"
-emoji: "🔥"
+emoji: "🐙"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Flutter, iOS, Android]
 published: false
@@ -17,7 +17,7 @@ Flutterにおいて、アプリの状態変化（フォアグラウンド・バ�
 なお、本文章についてはChatGPT-o1を用いて、文章の校正を行っておりますが、最終的な文章・動作のチェックは執筆者本人が行っていますことを了承ください。
 :::
 
-## AppLifeｃｙｃleStateとは
+## AppLifecycleStateとは
 Flutterでは、アプリがフォアグラウンドで動作しているか、バックグラウンドに移行したかなどを検知するために、`WidgetsBindingObserver` を用いて `AppLifecycleState` を受け取ることができます。
 
 ### AppLifeCycleStateの種類
