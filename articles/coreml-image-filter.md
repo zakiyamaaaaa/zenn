@@ -7,7 +7,11 @@ published: true
 ---
 
 # はじめに
-iOSの機械学習である`CoreML`を使って画像の加工をやってみたいと思います。
+iOSの機械学習機能である`CoreML`と`Vision`を使って画像の加工をやってみたいと思います。
+作るアプリはこんな感じです。
+
+![](/images/coreml-image-filter/movie1.gif)
+
 `CoreML`の概要について、[Apple公式ページ](https://developer.apple.com/jp/documentation/coreml/)から引用します。
 
 > Core MLを使って、機械言語モデルをアプリに統合します。Core MLはすべてのモデルを統一された方法で扱えます。アプリは、Core ML APIとユーザーデータを使用して、予測の作成、モデルのトレーニングや微調整をすべてユーザーのデバイス上で行います。
