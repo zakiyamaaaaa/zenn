@@ -1,8 +1,8 @@
 ---
 title: "【MacOS/iOS】進化したメモアプリを使いこなす"
-emoji: "🐙"
+emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+topics: [macOS,iOS,memo]
 published: false
 ---
 
