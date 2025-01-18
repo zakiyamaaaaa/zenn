@@ -38,12 +38,12 @@ published: false
 文章をセクションとして、折りたたみすることが可能となりました。段落に見出し、または小見出しの段落フォーマットを設定すると、折りたたみすることが可能になります。
 
 
-![](/images/memo-app-features/d.gif)
+![](/images/memo-app-features/e.gif)
 
 ### 選択した文字列を素早く強調表示
 これまではカラーバネルを使って文字色を変更して、強調表示するのが一般的でしたが、新たに文字スタイルのメニューに強調表示が追加されたので、こちらから素早く行うことが可能になりました。
 
-![](/images/memo-app-features/e.gif)
+![](/images/memo-app-features/f.gif)
 
 ただ、頻繁に使う方にはショートカットの`⌘ Shift E`を使ったほうが良さそうです。
 
@@ -51,7 +51,7 @@ published: false
 従来のPDFでも検索はできたのですが、その検索ワードがハイライトされないために、どこにあるかを探す必要がありました。
 しかし、今回のアップデートによって、PDF内でも検索ワードがハイライトされ、探しやすくなりました。
 
-![](/images/memo-app-features/f.gif)
+![](/images/memo-app-features/g.gif)
 
 ## Sonomaでの新機能
 Sonomaでもメモappの機能アップデートがありましたが、正直Sequoiaほどの目新しいものは無かった印象です。
@@ -62,7 +62,7 @@ Sonomaでもメモappの機能アップデートがありましたが、正直Se
 テキストのフォーマットを等幅とすることで見やすくなりました。
 個人的には言語による色付けもあれば、完璧です。
 
-![](/images/memo-app-features/g.gif)
+![](/images/memo-app-features/h.gif)
 
 なお、ショートカットは
 ブロック引用→ `⌘ ^`
@@ -71,7 +71,7 @@ Sonomaでもメモappの機能アップデートがありましたが、正直Se
 ### PDFのインライン引用
 SequoiaでPDFの検索ハイライトを紹介しましたが、そもそもSonomaまでは、PDFを添付しても中身をクリックしないと見れませんでした。しかし、Sonomaでは中身をそのまま見られるようになり、PDFとの連携がしやすくなりました。
 
-![](/images/memo-app-features/h.gif)
+![](/images/memo-app-features/i.gif)
 
 ## 番外編・ショートカットを割り当てる
 以上が近年のメモ.appのアップデートについてでした。
