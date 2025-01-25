@@ -2,17 +2,18 @@
 title: "go_routerの各遷移方法について学ぶ"
 emoji: "✏️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [Flutter, go_router]
+topics: [Flutter, go_router, dart]
 published: false
 ---
 
 # はじめに
-Flutterにおける遷移の方法は大きく２つに分かれます。
-それぞれをNavigator1.0,Navigator2.0とすると、
-* Navigator1.0：命令的な方法。Navigator.push()やNavigator.pop()のように、画面をスタックして扱う
-* Navigator2.0：宣言的な方法。アプリの状態を元に画面遷移を定義し、ナビゲーションの制御を行う。
+モバイル開発において、重要な要素である画面遷移ですが、Flutterにおける遷移の方法は大きく２つに分かれます。
+それぞれをNavigator1.0,Navigator2.0とすると
+* **Navigator1.0**：命令的な方法。Navigator.push()やNavigator.pop()のように、画面をスタックして扱う
+* **Navigator2.0**：宣言的な方法。アプリの状態を元に画面遷移を定義し、ナビゲーションの制御を行う。
 
-Navigator2.0の主な特徴はこちらになります。（本記事の本題ではないので、知っている方は読み飛ばしてください）
+Navigator2.0の主な特徴はこちらになります。
+（本記事の本題ではないので、知っている方は読み飛ばしてください）
 :::details Navigator2.0の主な特徴
 1. 宣言的ナビゲーション:
 
@@ -37,7 +38,7 @@ Navigator 1.0ではRouteが単一の画面を表していましたが、Navigato
 
 Navigator2.0によって、画面遷移の幅は広がったのですが、Navigator2.0をラップしたライブラリを用いることが多いです。
 2025年1月現在では、主に`go_router`, `auto_route`という２つのライブラリが広く使われている印象です。
-私が仕事で携わるプロジェクトでは`go_router`を使っていることから、本記事では、`go_router`の遷移API(go,push,replaceなど)の遷移方法の違いについて説明していきたいと思います。
+私が仕事で携わるプロジェクトでは`go_router`を使っていることから、本記事では、`go_router`の遷移API(go,push,replaceなど)の違いについて説明します。
 
 # go_router
 https://pub.dev/packages/go_router
@@ -54,7 +55,7 @@ https://pub.dev/packages/go_router
 > ・MaterialとCupertinoアプリの両方をサポート
 > ・Navigator API との下位互換性
 
-go routerのセットアップについては、こちらの記事などを参考にしてください。
+go_routerのセットアップについては、こちらの記事などを参考にしてください。
 https://zenn.dev/channel/articles/af4ffd813b1424
 
 ## go_routerの遷移API
@@ -95,6 +96,7 @@ https://github.com/zakiyamaaaaa/go-router-sandbox
 context.go('/second');
 ```
 
+遷移先の画面で、画面のスタックを確認します。
 ```bash
 goRouter.routerDelegate.currentConfiguration.matches
 
@@ -242,13 +244,14 @@ replaceのコードについて、次のようなコメントがありました�
 # おわりに
 いかがでしたでしょうか。
 Flutterアプリ開発において、遷移方法特にNavigator2.0への理解はとても重要だと考えます。
-go_routerを使うにはある程度慣れも必要だと思いますが、これらの基本的な遷移の理解をしていることがさらに理解を進め、自信を持って遷移処理を実装できると思います。
-個人的には、`go_router_builder`と一緒に使うのがおすすめですが、導入検討している方は調べてみてください。
+go_routerを使うにはある程度慣れも必要だと思いますが、これらの基本的な遷移の理解をしていることで、自信を持って遷移処理を実装できると思います。
+個人的には、`go_router_builder`と一緒に使うのがおすすめで、go_routerの導入検討している方は調べてみてください。
 お読みいただきありがとうございました。
 
 気軽にフォローしてください。
 https://x.com/yamazaking0
 
-## 参考にした記事とか
+# 参考にした記事とか
+https://pub.dev/packages/go_router
 
 https://zenn.dev/channel/articles/af4ffd813b1424
