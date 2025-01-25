@@ -3,7 +3,7 @@ title: "go_routerの各遷移方法について学ぶ"
 emoji: "✏️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Flutter, go_router, dart]
-published: false
+published: true
 ---
 
 # はじめに
