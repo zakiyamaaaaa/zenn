@@ -1,5 +1,5 @@
 ---
-title: "Swift復帰勢のための@Sendable"
+title: "@Sendableの理解をキャッチアップする"
 emoji: "🦚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Swift,Swift concurrency,Sendable]
