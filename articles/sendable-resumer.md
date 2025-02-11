@@ -1,9 +1,9 @@
 ---
 title: "Swift復帰勢のための@Sendable"
-emoji: "🔖"
+emoji: "🦚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Swift,Swift concurrency,Sendable]
-published: false
+published: true
 ---
 
 ## はじめに
