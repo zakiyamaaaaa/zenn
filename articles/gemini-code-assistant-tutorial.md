@@ -17,7 +17,7 @@ https://codeassist.google/
 こちらのページからgemini-code-assistをGitHubに統合します。
 https://github.com/apps/gemini-code-assist
 
-![](/images/gemini-code-assistant-tutorial/image1 =300x)
+![](/images/gemini-code-assistant-tutorial/image1.png =300x)
 
 完了したらこのようなページが最後に表示されます。
 ![](/images/gemini-code-assistant-tutorial/image2 =300x)
