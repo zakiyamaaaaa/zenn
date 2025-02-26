@@ -1,9 +1,9 @@
 ---
 title: "gemini code assistでPRをレビューしてみた"
-emoji: "📘"
+emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter,gemini,ai,github]
-published: false
+published: true
 ---
 
 ## はじめに
