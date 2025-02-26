@@ -32,7 +32,7 @@ GitHubに統合したかどうかはGitHubの`Settings>integrations Applications
 プロジェクト作成した場合、Flutter開発者にはよく見慣れたカウンターアプリの画面がでてきます。タイトルを変更して、このような感じになります。
 右下のボタンを押すと、数字が１ずつ足される簡単なアプリケーションです。
 
-![](/images/gemini-code-assistant-tutorial/image10.png)
+![](/images/gemini-code-assistant-tutorial/image10.png =300x)
 
 ### Pull Request
 それでは、簡単にPull Requestを出していきます。
@@ -63,6 +63,8 @@ This pull request, titled "number color changes red when _counter is 3 times", m
 トリビアもありました。クイズ？（他のレビューではなかったりするので、確率的に発生？）
 
 ```
+Trivia time!
+
 What is the purpose of the copyWith method in Flutter's TextStyle class?
 Click here for the answer
 
@@ -73,7 +75,7 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 
 次のコメントには、このようにしっかりとレビューしてくれてるようです。
 
-![](/images/gemini-code-assistant-tutorial/image7.png)
+![](/images/gemini-code-assistant-tutorial/image7.jpeg)
 
 提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあり、このレビュー内容がどれくらい推奨されるものかを示していそうです。
 
@@ -125,3 +127,6 @@ Text(
 日々進化していくAI技術に対して、使いこなして効率性を高めていくことが求められそうです。
 
 ## 参考記事
+https://codeassist.google/
+
+https://github.com/apps/gemini-code-assist
