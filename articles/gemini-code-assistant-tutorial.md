@@ -22,16 +22,17 @@ https://github.com/apps/gemini-code-assist
 完了したらこのようなページが最後に表示されます。
 ![](/images/gemini-code-assistant-tutorial/image2.png)
 
-GitHubに統合したかどうかはGitHubの`Settings>integrations Applications`のところで、`Installed GitHub Apps`で確認できます。
+GitHubに統合したかどうかはGitHubの`Settings>integrations Applications`の、`Installed GitHub Apps`で確認できます。
 ![](/images/gemini-code-assistant-tutorial/image3.png)
 
-それでは、実際にCode reviewを試してみます。
+それでは、実際にCode Reviewを試してみます。
 
 ## Code Review
 自分はFlutterエンジニアであり、Flutterの場合は最初に簡単なカウンターテンプレートを作ることができます。
-プロジェクト作成した場合、このようなFlutter開発者にはよく見慣れたカウンターアプリの画面がでてきます。
-タイトルを変更して、このような感じになります。
+プロジェクト作成した場合、Flutter開発者にはよく見慣れたカウンターアプリの画面がでてきます。タイトルを変更して、このような感じになります。
 右下のボタンを押すと、数字が１ずつ足される簡単なアプリケーションです。
+
+![](/images/gemini-code-assistant-tutorial/image10.png)
 
 ### Pull Request
 それでは、簡単にPull Requestを出していきます。
@@ -74,7 +75,7 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 
 ![](/images/gemini-code-assistant-tutorial/image7.png)
 
-提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあるので、このレビュー内容がどれくらい推奨されているのかを示していそうです。
+提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあり、このレビュー内容がどれくらい推奨されるものかを示していそうです。
 
 
 ここにあるようにコメントのところで、geminiコマンドを使えるそうです。
@@ -92,7 +93,7 @@ https://github.com/marketplace/gemini-code-assist
 
 ![](/images/gemini-code-assistant-tutorial/image8.png)
 
-### Code Review2
+### Code Review (wrong pull request)
 それでは、次に間違った内容のPull Requestをやってみたいと思います。
 
 次のようにコードを修正します。
@@ -111,12 +112,12 @@ Text(
 
 ![](/images/gemini-code-assistant-tutorial/image9.png)
 
-パット見わかりずらいかもしれませんが、PRタイトルと内容では5の倍数と書いてるけど、4の剰余としている、とあります。
+パット見わかりずらいかもしれませんが、SummaryとHighlightの部分で、「PRタイトルと内容では5の倍数と書いてるけど、4の剰余としている」とあります。
 ただ、コードレビューでは4をマジックナンバーとしていることを指摘しています。
 ここらへんはまだ発展途上かもしれません。それでも、この指摘も的を得ています。
 
 ## おわりに
-駆け足で本日発表されたgemini code assistantのレビュー機能をざっと使ってみました。
+本日発表されたgemini code assistantのレビュー機能をざっと使ってみました。
 驚いたのは、これが無料で使えるということです。
 今回は簡単な修正だったのもあるかもしれませんが、指摘内容が的確で2,3秒で結果が出てきたのが驚きました。
 また、コメントのところで@geminiとすることで、対話的に聞くこともできて気になる箇所とかを集中的に聞けたりするため、とても効果的だなと思います。
