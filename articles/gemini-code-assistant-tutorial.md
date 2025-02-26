@@ -17,13 +17,13 @@ https://codeassist.google/
 こちらのページからgemini-code-assistをGitHubに統合します。
 https://github.com/apps/gemini-code-assist
 
-![](/images/gemini-code-assistant-tutorial/image1.png =300x)
+![](/images/gemini-code-assistant-tutorial/image1.png)
 
 完了したらこのようなページが最後に表示されます。
-![](/images/gemini-code-assistant-tutorial/image2 =300x)
+![](/images/gemini-code-assistant-tutorial/image2.png)
 
 GitHubに統合したかどうかはGitHubの`Settings>integrations Applications`のところで、`Installed GitHub Apps`で確認できます。
-![](/images/gemini-code-assistant-tutorial/image3 =300x)
+![](/images/gemini-code-assistant-tutorial/image3.png)
 
 それでは、実際にCode reviewを試してみます。
 
@@ -72,7 +72,7 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 
 次のコメントには、このようにしっかりとレビューしてくれてるようです。
 
-![](/images/gemini-code-assistant-tutorial/image7)
+![](/images/gemini-code-assistant-tutorial/image7.png)
 
 提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあるので、このレビュー内容がどれくらい推奨されているのかを示していそうです。
 
@@ -84,13 +84,13 @@ https://github.com/marketplace/gemini-code-assist
 対話的に聞くこともできます。
 心配なところがあるか、聞いてみました。
 
-![](/images/gemini-code-assistant-tutorial/image6 =300x)
+![](/images/gemini-code-assistant-tutorial/image6.png)
 
 ちゃんと答えてくれてすごい。コミニケーション苦手なエンジニア淘汰されるかも。
 
 日本語でレビューをお願いしましたが、今現在はできないようです。
 
-![](/images/gemini-code-assistant-tutorial/image8)
+![](/images/gemini-code-assistant-tutorial/image8.png)
 
 ### Code Review2
 それでは、次に間違った内容のPull Requestをやってみたいと思います。
