@@ -17,19 +17,23 @@ https://codeassist.google/
 こちらのページからgemini-code-assistをGitHubに統合します。
 https://github.com/apps/gemini-code-assist
 
-// 設定中の画像
+![](/images/gemini-code-assistant-tutorial/image1 =300x)
+
+完了したらこのようなページが最後に表示されます。
+![](/images/gemini-code-assistant-tutorial/image2 =300x)
+
+GitHubに統合したかどうかはGitHubの`Settings>integrations Applications`のところで、`Installed GitHub Apps`で確認できます。
+![](/images/gemini-code-assistant-tutorial/image3 =300x)
 
 それでは、実際にCode reviewを試してみます。
 
-## やってみる
+## Code Review
 自分はFlutterエンジニアであり、Flutterの場合は最初に簡単なカウンターテンプレートを作ることができます。
 プロジェクト作成した場合、このようなFlutter開発者にはよく見慣れたカウンターアプリの画面がでてきます。
 タイトルを変更して、このような感じになります。
 右下のボタンを押すと、数字が１ずつ足される簡単なアプリケーションです。
 
-「画像」
-
-### Code Review
+### Pull Request
 それでは、簡単にPull Requestを出していきます。
 数字が３の倍数のときに赤くなるようにします。
 
@@ -40,11 +44,14 @@ Text(
         color: _counter % 3 == 0 ? Colors.red : Colors.black),
 ),
 ```
-commitメッセージは次のようにしました
+commitメッセージは次のようにしました。（英語としては完全ではないです。）
 `number color changes red when _counter is 3 times`
 
+この内容で、Pull Requestを出します。タイトルと内容も、このcommitメッセージと同じものとしました。
+
+### gemini code assistantのレビュー
 こんな感じのレビューをもらいました。
-「画像」
+![](/images/gemini-code-assistant-tutorial/image4.png)
 
 まずは、プルリクの全体的な総評がなされてるようです。
 ```md
@@ -52,7 +59,7 @@ Summary of Changes
 This pull request, titled "number color changes red when _counter is 3 times", modifies the lib/main.dart file to change the color of the counter text to red when the _counter variable is a multiple of 3. The change involves using the copyWith method on the headlineMedium text style to conditionally set the color to red or black based on the _counter value.
 ```
 
-トリビアもあります。クイズ？
+トリビアもありました。クイズ？（他のレビューではなかったりするので、確率的に発生？）
 
 ```
 What is the purpose of the copyWith method in Flutter's TextStyle class?
@@ -65,26 +72,25 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 
 次のコメントには、このようにしっかりとレビューしてくれてるようです。
 
-「画像」
+![](/images/gemini-code-assistant-tutorial/image7)
 
 提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあるので、このレビュー内容がどれくらい推奨されているのかを示していそうです。
 
-### issue
 
 ここにあるようにコメントのところで、geminiコマンドを使えるそうです。
 https://github.com/marketplace/gemini-code-assist
-
-日本語でレビューをしてくれるか聞きましたが、できないようです。
-
-【画像】
 
 
 対話的に聞くこともできます。
 心配なところがあるか、聞いてみました。
 
-【画像】
+![](/images/gemini-code-assistant-tutorial/image6 =300x)
 
 ちゃんと答えてくれてすごい。コミニケーション苦手なエンジニア淘汰されるかも。
+
+日本語でレビューをお願いしましたが、今現在はできないようです。
+
+![](/images/gemini-code-assistant-tutorial/image8)
 
 ### Code Review2
 それでは、次に間違った内容のPull Requestをやってみたいと思います。
@@ -103,7 +109,7 @@ Text(
 
 レビュー内容はこのようになりました。
 
-「画像」
+![](/images/gemini-code-assistant-tutorial/image9.png)
 
 パット見わかりずらいかもしれませんが、PRタイトルと内容では5の倍数と書いてるけど、4の剰余としている、とあります。
 ただ、コードレビューでは4をマジックナンバーとしていることを指摘しています。
