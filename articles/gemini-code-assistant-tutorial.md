@@ -75,7 +75,7 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 
 次のコメントには、このようにしっかりとレビューしてくれてるようです。
 
-![](/images/gemini-code-assistant-tutorial/image7.jpeg)
+![](/images/gemini-code-assistant-tutorial/image7.png)
 
 提案内容は、カラーロジックを分けたほうが読みやすいとのこと。的を得たレビューだと思います。優先度のラベルもあり、このレビュー内容がどれくらい推奨されるものかを示していそうです。
 
