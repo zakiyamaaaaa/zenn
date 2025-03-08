@@ -84,6 +84,7 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 https://github.com/marketplace/gemini-code-assist
 
 |Feature|Command|Description|
+| ---- | ---- | ---- |
 |Code Review|/gemini review|Performs a code review for the current
 |pull request in its current state.|
 |PR Summary|/gemini summary|Provides a summary of the current pull request in its current state.|
