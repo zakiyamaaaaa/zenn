@@ -151,3 +151,5 @@ Text(
 https://codeassist.google/
 
 https://github.com/apps/gemini-code-assist
+
+https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github?hl=ja
