@@ -83,6 +83,12 @@ The `copyWith` method in Flutter's TextStyle class is used to create a new TextS
 ここにあるようにコメントのところで、geminiコマンドを使えるそうです。
 https://github.com/marketplace/gemini-code-assist
 
+|Feature|Command|Description|
+|Code Review|/gemini review|Performs a code review for the current
+|pull request in its current state.|
+|PR Summary|/gemini summary|Provides a summary of the current pull request in its current state.|
+|Comment |@gemini-code-assist|Responds in comments when explicitly tagged, both in issue comments and review comments.|
+|Help|/gemini help|Displays a list of available commands.|
 
 対話的に聞くこともできます。
 心配なところがあるか、聞いてみました。
@@ -91,9 +97,6 @@ https://github.com/marketplace/gemini-code-assist
 
 ちゃんと答えてくれてすごい。コミニケーション苦手なエンジニア淘汰されるかも。
 
-日本語でレビューをお願いしましたが、今現在はできないようです。
-
-![](/images/gemini-code-assistant-tutorial/image8.png)
 
 ### Code Review (wrong pull request)
 それでは、次に間違った内容のPull Requestをやってみたいと思います。
@@ -118,6 +121,23 @@ Text(
 パット見わかりずらいかもしれませんが、SummaryとHighlightの部分で、「PRタイトルと内容では5の倍数と書いてるけど、4の剰余としている」とあります。
 ただ、コードレビューでは4をマジックナンバーとしていることを指摘しています。
 ここらへんはまだ発展途上かもしれません。それでも、この指摘も的を得ています。
+
+### 日本語でレビューを行う
+リポジトリディレクトリに`.gemini/styleguide.md`を作成します。ここでgemini code assistの動作をカスタマイズできます。[参照](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github?hl=ja)
+ここで、日本語で回答するようにします。
+
+```.gemini/styleguide.md
+日本語で回答してください
+```
+
+こんな感じで日本語で回答してくれます。
+多国籍チームでの開発でも使えそう✨️
+
+![](/images/gemini-code-assistant-tutorial/image11)
+
+:::message
+こちらの日本語での回答ですが、他のブランチで試したところ、うまくいかないことがありました。まだ動作が不安定なようです。
+:::
 
 ## おわりに
 本日発表されたgemini code assistantのレビュー機能をざっと使ってみました。
