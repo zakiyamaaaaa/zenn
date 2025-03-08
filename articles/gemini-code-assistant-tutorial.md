@@ -85,8 +85,7 @@ https://github.com/marketplace/gemini-code-assist
 
 |Feature|Command|Description|
 | ---- | ---- | ---- |
-|Code Review|/gemini review|Performs a code review for the current
-|pull request in its current state.|
+|Code Review|/gemini review|Performs a code review for the current pull request in its current state.|
 |PR Summary|/gemini summary|Provides a summary of the current pull request in its current state.|
 |Comment |@gemini-code-assist|Responds in comments when explicitly tagged, both in issue comments and review comments.|
 |Help|/gemini help|Displays a list of available commands.|
