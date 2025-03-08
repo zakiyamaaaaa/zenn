@@ -133,7 +133,7 @@ Text(
 こんな感じで日本語で回答してくれます。
 多国籍チームでの開発でも使えそう✨️
 
-![](/images/gemini-code-assistant-tutorial/image11)
+![](/images/gemini-code-assistant-tutorial/image11.png)
 
 :::message
 こちらの日本語での回答ですが、他のブランチで試したところ、うまくいかないことがありました。まだ動作が不安定なようです。
