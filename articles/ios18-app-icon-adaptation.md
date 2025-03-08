@@ -1,9 +1,9 @@
 ---
-title: "iOS/iPadOSアイコンアップデートに備える"
+title: "iOS/iPadOSアイコンアップデートに対応する"
 emoji: "👌"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [iOS,iPadOS]
-published: false
+topics: [iOS,iPadOS, Xcode]
+published: true
 ---
 
 # はじめに
