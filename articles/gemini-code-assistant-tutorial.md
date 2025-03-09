@@ -1,5 +1,5 @@
 ---
-title: "gemini code assistでPRをレビューしてみた"
+title: "【個人でも無料で使える】gemini code assistでプルリクをレビューしてみた"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter,gemini,ai,github]
