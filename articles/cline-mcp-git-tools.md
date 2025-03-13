@@ -3,7 +3,7 @@ title: "ClineでMCP入門：Git Tools"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [cline, mcp, git,ai]
-published: false
+published: true
 ---
 
 ## はじめに
@@ -24,7 +24,7 @@ ClineとMCPを使ってGit操作を効率化する方法を紹介します。具
 前提として、Clineをインストールしている必要があります。
 また、今回特に関係ないですが、使用モデルは`gemini-2.0-flash`になります。現時点では、無料の範囲で使うことができます。
 `computer use`が使用不可なので、入門の方にも安心して使用できると思います。
-ただし、現時点（2025/03/13）の話なので、今後料金体系が変動する可能性があるため、tokenの料金などを事前にチェックしといたほうがいいです。
+ただし、現時点（2025/03/13）の話であり、今後料金体系が変動する可能性があるため、tokenの料金などを事前にチェックしといたほうがいいです。
 :::
 
 ## 1. Git Toolsのインストール
@@ -67,10 +67,11 @@ mkdir -p /Users/YOUR_NAME/Documents/Cline/MCP
 ![](/images/cline-mcp-git-tools/image7.png)
 
 こちら調べたところ、次のIssueから解決しました。
+https://github.com/cline/cline/issues/1160
 
 command部分を次のようなフルパスにして設定してください。
 
-```json
+```json:cline_mcp_settings.json
 {
   "mcpServers": {
     "github.com/modelcontextprotocol/servers/tree/main/src/git": {
@@ -128,6 +129,7 @@ Git Toolsで使えるツールは、MCP ServerのGit Toolsを展開すると、�
 MCPによって、開発の幅も広がるので、色々と触っていきたいです。
 
 - 参考リソース
+
 https://github.com/cline/cline
 
 https://github.com/cline/mcp-marketplace
