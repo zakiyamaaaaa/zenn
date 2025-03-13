@@ -7,15 +7,24 @@ published: false
 ---
 
 ## はじめに
-- Clineとは（簡単な紹介）
-  - Clineは、Model Context Protocol (MCP) を利用した開発を支援するツールです。コマンドラインからGit操作などを簡単に行えます。
-- MCPの概要（基本的な説明のみ）
-  - MCPは、異なるツールやサービス間でコンテキストを共有するためのプロトコルです。Clineはこのプロトコルを利用して、Gitなどのツールを操作します。
+- Clineとは
+Clineは、Model Context Protocol (MCP) を利用した開発を支援するツールです。コマンドラインからGit操作などを簡単に行えます。
+
+- MCPの概要
+MCPは、異なるツールやサービス間でコンテキストを共有するためのプロトコルです。Clineはこのプロトコルを利用して、Gitなどのツールを操作します。
+
 - 本記事の目的
-  - ClineとMCPを使ってGit操作を効率化する方法を紹介します。具体的な手順と例を交えて解説します。
+ClineとMCPを使ってGit操作を効率化する方法を紹介します。具体的な手順と例を交えて解説します。
+
+:::message
+前提として、Clineをインストールしている必要があります。
+また、今回特に関係ないですが、使用モデルは`gemini-2.0-flash`になります。現時点では、無料の範囲で使うことができます。
+`computer use`が使用不可なので、入門の方にも安心して使用できると思います。
+ただし、現時点（2025/03/13）の話なので、今後料金体系が変動する可能性があるため、tokenの料金などを事前にチェックしといたほうがいいです。
+:::
 
 ## 1. Git Toolsのインストール
-MCPサーバーの設定は、JSONファイルを設定したりと少し面倒なのですが、2025年2月からClineで`MCP MarketPlace`が使えるようになり、VSCodeのExtensionと同じかたちで、気軽にMCPサーバーの追加をすることができます。
+MCPサーバーの設定は、本来であればJSONファイルを設定したりと少し面倒なのですが、2025年2月からClineで`MCP MarketPlace`が使えるようになり、VSCodeのExtensionと同じかたちで、気軽にMCPサーバーの追加をすることができます。
 マーケットプレイスを開くには、VSCodeでClineの拡張を選択した画面で、こちらのアイコンを選択してください。
 ![](/images/gemini-code-assistant-tutorial/image1.png)
 
@@ -91,7 +100,8 @@ GitToolsのインストールに成功しているようです。
 
 ## 2. 基本的なGit Tools
 Git Toolsで使えるツールは、MCP ServerのGit Toolsを展開すると、確認できます。
-今現在は、次の11このgit commandが使えるようです。
+今現在は、次の11個のgit commandが使えるようです。
+
 * git status
 * git diff unstage
 * git diff staged
@@ -103,7 +113,6 @@ Git Toolsで使えるツールは、MCP ServerのGit Toolsを展開すると、�
 * git create branch
 
 それぞれのツールで、Auto-approveのチェックボックスがあるので、自動的に承認したい場合は、これをONにしましょう。
-git pushは現時点では使えないので、勝手にpushすることは防げるようです。
 
 ## まとめ
 - Git Toolsの利点
