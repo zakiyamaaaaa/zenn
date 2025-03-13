@@ -2,7 +2,7 @@
 title: "ClineでMCP入門：Git Tools"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+topics: [cline, mcp, git,ai]
 published: false
 ---
 
@@ -14,80 +14,103 @@ published: false
 - 本記事の目的
   - ClineとMCPを使ってGit操作を効率化する方法を紹介します。具体的な手順と例を交えて解説します。
 
-## 1. Git MCPサーバーの設定
-- MCPサーバーの設定ファイルの場所
-  - Clineの設定ファイル（通常は`~/.cline/config.json`）にMCPサーバーの情報を記述します。このファイルはJSON形式で、MCPサーバーのアドレスや認証情報などを設定します。
-- Git MCPサーバーの有効化方法
-  - 設定ファイルにGit MCPサーバーを追加します。例えば、以下のような設定を追加します。
-  ```json
-  {
-    "mcpServers": {
-      "git": {
-        "address": "http://localhost:8080",
-        "type": "git"
-      }
+## 1. Git Toolsのインストール
+MCPサーバーの設定は、JSONファイルを設定したりと少し面倒なのですが、2025年2月からClineで`MCP MarketPlace`が使えるようになり、VSCodeのExtensionと同じかたちで、気軽にMCPサーバーの追加をすることができます。
+マーケットプレイスを開くには、VSCodeでClineの拡張を選択した画面で、こちらのアイコンを選択してください。
+![](/images/gemini-code-assistant-tutorial/image1.png)
+
+選択すると、次のような画面になり、Marketplaceから検索できます。
+
+![](/images/gemini-code-assistant-tutorial/image2.png)
+
+最初は、最新順でソートされてるので、GitHub Starsを押してみましょう。そうすると、スター数の多い順にMCPサーバーが表示されます。
+今回は、現在２番目にある`Git Tools`を使用していきます。
+
+![](/images/gemini-code-assistant-tutorial/image3.png)
+
+右のInstallボタンを押すと、MCPサーバーをインストールするTaskが開始されます。
+
+![](/images/gemini-code-assistant-tutorial/image4.png)
+
+コマンドが求められます。コマンドを確認し、Run Commandで、実行します。
+```bash
+mkdir -p /Users/shoichiyamazaki/Documents/Cline/MCP
+```
+
+なんやかんやで、インストールに成功したらデモンストレーションを促されます。
+内容を確認して、タスクを実行します。
+
+![](/images/gemini-code-assistant-tutorial/image5.png)
+
+自分の場合、途中でエラーが出ました。
+
+![](/images/gemini-code-assistant-tutorial/image6.png)
+
+エラーの内容を判断して、推奨コマンドを促しています。
+内容を確認して、実行します。
+
+どうやらエラーの根本的解決に至りませんでした。
+
+インストールされたGitToolsのページを見に行きます。
+先程のMarketplaceからInstalledを開きましょう。
+そうすると、エラーメッセージが出ています。
+
+![](/images/gemini-code-assistant-tutorial/image7.png)
+
+こちら調べたところ、次のIssueから解決しました。
+
+command部分を次のようなフルパスにして設定してください。
+```json
+{
+  "mcpServers": {
+    "github.com/modelcontextprotocol/servers/tree/main/src/git": {
+      "command": "/Users/shoichiyamazaki/.pyenv/versions/3.8.0/bin/uvx",
+      "args": ["mcp-server-git"],
+      "disabled": false,
+      "autoApprove": []
     }
   }
-  ```
-  Clineを再起動して、設定を反映させます。
+}
+```
+
+この内容で保存すると、先程のエラーが消えていました。
+
+それでは次のタスクを実行し、gitブランチ名を取得してみます。
+
+```prompt
+GitToolsから現在のgitブランチ名を取得して
+```
+
+こんな感じで、Git Toolsを使用を求められました。
+ここで、Auto-approveとすると、これ以降承認なしでMCPサーバーが使われます。
+
+このような形で、現在のブランチ名を取得できました。
+![](/images/gemini-code-assistant-tutorial/image8.png)
+
+GitToolsのインストールに成功しているようです。
 
 ## 2. 基本的なGit Tools
-- git_status：リポジトリの状態確認
-  - `git_status`ツールを使って、リポジトリの現在の状態を確認します。例えば、以下のコマンドを実行します。
-  ```
-  cline git_status
-  ```
-  これにより、変更されたファイルやステージングの状態が表示されます。
-- git_diff_unstaged：ステージングされていない変更の確認
-  - `git_diff_unstaged`ツールで、まだステージングされていない変更点を確認します。
-  ```
-  cline git_diff_unstaged
-  ```
-  変更された内容が詳細に表示されます。
-- git_diff_staged：ステージングされた変更の確認
-  - `git_diff_staged`ツールで、ステージング済みの変更点を確認します。
-  ```
-  cline git_diff_staged
-  ```
-  ステージングされた変更内容を確認できます。
-- git_add：ファイルのステージング
-  - `git_add`ツールを使って、ファイルをステージングします。例えば、`file.txt`をステージングするには、以下のコマンドを実行します。
-  ```
-  cline git_add file.txt
-  ```
-- git_commit：変更のコミット
-  - `git_commit`ツールで、変更をリポジトリにコミットします。コミットメッセージを指定する必要があります。
-  ```
-  cline git_commit -m "変更内容の説明"
-  ```
-- git_reset：ステージングのリセット
-  - `git_reset`ツールで、ステージングを取り消します。
-  ```
-  cline git_reset
-  ```
-  これにより、ステージングされたファイルが元の状態に戻ります。
+Git Toolsで使えるツールは、MCP ServerのGit Toolsを展開すると、確認できます。
+今現在は、次の11このgit commandが使えるようです。
+* git status
+* git diff unstage
+* git diff staged
+* git diff
+* git commit
+* git add
+* git reset
+* git log
+* git create branch
 
-## 3. ブランチ操作のGit Tools
-- git_create_branch：新しいブランチの作成
-  - `git_create_branch`ツールで、新しいブランチを作成します。例えば、`new_feature`というブランチを作成するには、以下のコマンドを実行します。
-  ```
-  cline git_create_branch new_feature
-  ```
-- git_checkout：ブランチの切り替え
-  - `git_checkout`ツールで、ブランチを切り替えます。`new_feature`ブランチに切り替えるには、以下のコマンドを実行します。
-  ```
-  cline git_checkout new_feature
-  ```
-
-## 4. 実践的な使用例
-- 新機能開発のシンプルなワークフロー
-  - 新機能開発では、まず`git_create_branch`で新しいブランチを作成します。次に、変更を行い、`git_add`でファイルをステージングし、`git_commit`でコミットします。最後に、プルリクエストを作成してレビューを依頼します。
-- バグ修正の基本的な流れ
-  - バグ修正では、まず修正ブランチを`git_create_branch`で作成します。次に、バグを修正し、`git_add`と`git_commit`で変更をコミットします。最後に、プルリクエストを作成してレビューを依頼します。
+それぞれのツールで、Auto-approveのチェックボックスがあるので、自動的に承認したい場合は、これをONにしましょう。
+git pushは現時点では使えないので、勝手にpushすることは防げるようです。
 
 ## まとめ
 - Git Toolsの利点
   - ClineとMCPを使うことで、Git操作を効率化できます。コマンドラインから簡単にGit操作を実行でき、開発効率が向上します。
+
 - 参考リソース
-  - Clineのドキュメント: [Clineの公式ドキュメント](https://example.com/cline-docs)
-  - MCPの仕様: [Model Context Protocolの仕様](https://example.com/mcp-spec)
+https://github.com/cline/mcp-marketplace
+
+https://github.com/modelcontextprotocol/servers/tree/main/src/git
+
