@@ -350,11 +350,11 @@ TODOアプリを作成してください
 
 アプリの外観としては、このようになりCopilot Visionとほぼ同じとなりました。（同様のコードを参照している？）
 
-![](/images/copilot-vision-claude-code-ios/image4.png)
+![](/images/copilot-vision-claude-code-ios/image7.png)
 
 結果的に次のような構成となりました。
 
-![](/images/copilot-vision-claude-code-ios/image5.png)
+![](/images/copilot-vision-claude-code-ios/image4.png)
 
 どうやらMVVMとしているようです。
 レスポンスにあるコードの説明でも、UserDefaultsを使ってタスクを保存していることがわかります。
@@ -381,6 +381,7 @@ Copilot Visionについては、Copilotに課金している必要かどうか�
 iOSアプリ開発でもAIを使ったコーディング支援ツールが登場しました。
 今回は最近話題のCopilot VisionとClaude Codeを使って、同じプロンプトを用いてTODOアプリを作成しました。
 結果的にはClaude Codeのほうが優勢でしたが、プロンプトを改良すれば、Copilot Visionも使いやすくなるかもしれません。
+なお、Claude Codeはもちろんですが、Copilot Visionのほうでも、コードを自動的に変更することが可能となるため、コピペがいらなくなりました。
 また、今回の例では新規開発で使いましたが、実際には既存コードの修正や追加であったり、もっと複雑なアプリになることが多いと思います。なので、この記事では費用感と出力を参考程度にしていただければと思います。
 
 ## 参考資料
