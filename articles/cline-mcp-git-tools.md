@@ -128,7 +128,7 @@ Git Toolsで使えるツールは、MCP ServerのGit Toolsを展開すると、�
 マーケットプレイスの登場によって、簡単にMCPサーバーを導入することが可能となります。
 MCPによって、開発の幅も広がるので、色々と触っていきたいです。
 
-- 参考リソース
+## 参考資料
 
 https://github.com/cline/cline
 
