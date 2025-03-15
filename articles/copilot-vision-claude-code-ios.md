@@ -7,11 +7,14 @@ published: false
 ---
 
 ## はじめに
-本記事の内容は、最近発表されたCopilot VisionとClaude codeを利用して、簡単なTODOアプリを作成する過程、そして実際にかかった料金（Claude code）についてです。
+本記事の内容は、最近発表されたCopilot VisionとClaude codeを利用して、簡単なTODOアプリを作成する過程、そして実際にかかった料金（Claude code）について書きました。
 これまでAIを使ったコーディングについては、VSCodeやCursorが先行していく形でしたが、ついにXcodeでも[GitHub公式からXcodeのアシスタントツール](https://github.com/github/CopilotForXcode)が発表され、コーディングアシストができるようになりました。
 ([サードパーティ製のCopilotForXcode](https://github.com/intitni/CopilotForXcode)が先行してリリースされて、使いましたが使用感はいまいちでした。)
 
 また、最近ではChatGPTアプリからXcodeのファイルを参照できるCopilot Visionという機能もリリースされました。
+一方、Claude codeはAnthropicが提供するコーディングエージェントで、Sonnetモデルを使用しています。
+
+iOSアプリの場合、Xcodeを使うのですが、今回はCopilot VisionとClaude codeを使って、同じプロンプトを用いてTODOアプリを作成し、その結果を比較してみました。
 
 :::message
 なお、AIの料金体系や機能については、執筆時点（2025年3月15日）の情報であり、変更される可能性が高いことにご留意ください。
@@ -31,6 +34,7 @@ published: false
 ![](/images/copilot-vision-claude-code-ios/image1.png)
 
 ChatGPTアプリを開くと、このようにXcodeのアイコンが出てきます。
+Xcodeアイコンが出ない場合は、チャット左下の画像で青いアイコンを選択して、Xcodeを選択してください。
 
 ![](/images/copilot-vision-claude-code-ios/image2.png)
 
@@ -44,7 +48,7 @@ TODOアプリを作成してください
 
 レスポンスは次のようでした。
 
-:::details
+:::details レスポンス
 ```swift:ContentView.swift
 //
 //  ContentView.swift
