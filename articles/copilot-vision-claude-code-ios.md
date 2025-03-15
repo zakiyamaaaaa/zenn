@@ -372,10 +372,11 @@ Claude Codeの料金は、APIの利用による従量課金です。
 
 Copilot Visionについては、Copilotに課金している必要かどうかはわかりませんでした。一応GitHub Copilotは、Freeのサブスクリプションでも使えるようでした。
 
-| ツール | コードの質 | 料金 |
+| ツール | Copilot Vision | Claude Code |
 | ---- | ---- | ---- |
-| Copilot Vision | 低 | 無料？ |
-| Claude Code | 中 | API利用の従量課金 |
+| コードの質 | 低 | 中 |
+| 料金 | 無料？ | API利用の従量課金 |
+| 結果 | ![](/images/copilot-vision-claude-code-ios/image3.png) | ![](/images/copilot-vision-claude-code-ios/image7.png) |
 
 ## まとめ
 iOSアプリ開発でもAIを使ったコーディング支援ツールが登場しました。
