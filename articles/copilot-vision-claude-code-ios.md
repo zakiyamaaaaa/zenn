@@ -1,9 +1,9 @@
 ---
 title: "Copilot VisionとClaude codeでiOSアプリを新規作成して比較"
-emoji: "🐥"
+emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Claude, Copilot, iOS, Xcode]
-published: false
+published: true
 ---
 
 ## はじめに
