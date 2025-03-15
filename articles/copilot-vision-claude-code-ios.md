@@ -376,7 +376,7 @@ Copilot Visionについては、Copilotに課金している必要かどうか�
 | ---- | ---- | ---- |
 | コードの質 | 低 | 中 |
 | 料金 | 無料？ | API利用の従量課金 |
-| 結果 | ![](/images/copilot-vision-claude-code-ios/image3.png =100x) | ![](/images/copilot-vision-claude-code-ios/image7.png =100x) |
+| 結果 | ![](/images/copilot-vision-claude-code-ios/image3.png) | ![](/images/copilot-vision-claude-code-ios/image7.png) |
 
 ## まとめ
 iOSアプリ開発でもAIを使ったコーディング支援ツールが登場しました。
