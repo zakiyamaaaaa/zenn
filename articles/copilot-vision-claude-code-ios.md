@@ -1,5 +1,5 @@
 ---
-title: "Copilot VisionとClaude codeでiOSアプリを新規作成して比較"
+title: "Copilot VisionとClaude CodeでiOSアプリを新規作成して比較"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Claude, Copilot, iOS, Xcode]
@@ -7,14 +7,14 @@ published: true
 ---
 
 ## はじめに
-本記事の内容は、最近発表されたCopilot VisionとClaude codeを利用して、簡単なTODOアプリを作成する過程、そして実際にかかった料金（Claude code）について書きました。
+本記事の内容は、最近発表されたCopilot VisionとClaude Codeを利用して、簡単なTODOアプリを作成する過程、そして実際にかかった料金（Claude Code）について書きました。
 これまでAIを使ったコーディングについては、VSCodeやCursorが先行していく形でしたが、ついにXcodeでも[GitHub公式からXcodeのアシスタントツール](https://github.com/github/CopilotForXcode)が発表され、コーディングアシストができるようになりました。
 ([サードパーティ製のCopilotForXcode](https://github.com/intitni/CopilotForXcode)が先行してリリースされて、使いましたが使用感はいまいちでした。)
 
 また、最近ではChatGPTアプリからXcodeのファイルを参照できるCopilot Visionという機能もリリースされました。
-一方、Claude codeはAnthropicが提供するコーディングエージェントで、Sonnetモデルを使用しています。
+一方、Claude CodeはAnthropicが提供するコーディングエージェントで、Sonnetモデルを使用しています。
 
-iOSアプリの場合、Xcodeを使うのですが、今回はCopilot VisionとClaude codeを使って、同じプロンプトを用いてTODOアプリを作成し、その結果を比較してみました。
+iOSアプリの場合、Xcodeを使うのですが、今回はCopilot VisionとClaude Codeを使って、同じプロンプトを用いてTODOアプリを作成し、その結果を比較してみました。
 
 :::message
 なお、AIの料金体系や機能については、執筆時点（2025年3月15日）の情報であり、変更される可能性が高いことにご留意ください。
@@ -356,7 +356,7 @@ TODOアプリを作成してください
 
 ![](/images/copilot-vision-claude-code-ios/image4.png)
 
-どうやらMVVMとしているようです。
+どうやらMVVMのアーキテクチャーを採用しているようです。
 レスポンスにあるコードの説明でも、UserDefaultsを使ってタスクを保存していることがわかります。
 
 ### 料金
