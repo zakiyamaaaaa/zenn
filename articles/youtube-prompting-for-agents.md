@@ -8,7 +8,7 @@ published: false
 
 毎朝YouTubeで適当な英語の技術に関する動画を視聴することを習慣化しています。今回は、最近見た中で特にためになる内容の動画を紹介します。
 
-https://www.youtube.com/watch?v=1g0b8jv1nHk
+https://youtu.be/XSZP9GhhuAc?si=ppVuhWc1K-mwR2oP
 
 動画のタイトルは「YouTube Prompting for Agents」で、Anthropicの研究者がエージェントに対するプロンプト設計について解説しています。AnthropicはAIの安全性と倫理性に注力している企業で、彼らの推奨するプロンプト設計は非常に参考になります。
 
