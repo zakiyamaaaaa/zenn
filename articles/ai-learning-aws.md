@@ -1,9 +1,9 @@
 ---
 title: "AIを使ってAWSの試験を合格できるかチャレンジ"
-emoji: "🐙"
+emoji: "💯"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Codex, AWS, AI, 学習]
-published: false
+published: true
 ---
 
 ## 結論
