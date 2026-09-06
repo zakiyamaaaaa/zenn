@@ -9,7 +9,6 @@ published: true
 ## 結論
 
 AIを使ってAWSのAIF,CLF試験に合格しました。
-// image1,image2の画像参照
 ![](/images/ai-aws-learning/image1.png)
 ![](/images/ai-aws-learning/image2.png)
 
