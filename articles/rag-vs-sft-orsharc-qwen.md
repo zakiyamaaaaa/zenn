@@ -14,7 +14,7 @@ LLMの性能を上げる方法としてRAGとFine-tuningがあります。それ
 
 結果をまとめると次のとおりです。
 
-![評価結果](/images/rag-vs-sft-orsharc-qwen/orsharc_results_ja.png)
+![正式評価の正解率](/images/rag-vs-sft-orsharc-qwen/orsharc_formal_accuracy.png)
 
 - SFT を入れた条件はどれも約 57〜60% で、最も高かったのは「学習時から検索文書を見せた SFT＋RAG」の 59.6% でした。ただし SFT 単独（56.8%）との差は 7 件と小さく、意味のある差だとは言い切れません。
 - Base（Qwenモデルのみ）での正答率は、2.4% 、 RAGと組み合わせた場合は0.4% でした。原因の多くは、回答の JSON を Markdown のコードフェンスで囲んでしまう形式違反です。フェンスだけを外して採点し直すと 39.2% と 41.6% になります。
