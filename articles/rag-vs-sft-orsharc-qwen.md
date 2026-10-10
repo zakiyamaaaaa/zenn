@@ -8,7 +8,7 @@ published: false
 
 ## はじめに（TL;DR）
 
-LLMの性能を上げる方法としてRAGとFine-tuningがあります。それらがどのように異なるのか、そして正解率に対してどのような結果になるのか、を今回は実験して確かめてみました。実験環境は、Google Colab の T4 GPU、仕様したモデルはQwen2.5-1.5B-Instruct を使って確かめました。
+LLMの性能を上げる方法としてRAGとFine-tuningがあります。それらがどのように異なるのか、そして正解率に対してどのような結果になるのか、を今回は実験して確かめてみました。実験環境は、Google Colab の T4 GPU、仕様したモデルはQwen2.5-1.5B-Instruct を使いました。
 
 題材は公開データセット [OR-ShARC](https://github.com/Yifan-Gao/open_retrieval_conversational_machine_reading) の「規則に照らして yes / no / 追加質問（inquire）を判断するタスク」です。同じ test 250 件で、何もしない Base、RAG、SFT、SFT＋RAG を比較しました。
 
