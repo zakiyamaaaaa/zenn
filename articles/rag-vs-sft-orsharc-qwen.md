@@ -3,7 +3,7 @@ title: "RAGとSFTはどう違うのか、どう結果が変わるのかを実験
 emoji: "🧪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [LLM, RAG, SFT, QLoRA, Qwen]
-published: false
+published: true
 ---
 
 ## はじめに（TL;DR）
